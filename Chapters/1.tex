@@ -43,8 +43,8 @@ $\upint_a^b f(x) \, \mathrm{d}x = inf \{ s(f, P) : P \text{ partición de } [a, 
             0 & x \in \R \setminus \Q
         \end{cases} f$ no es integrable Riemann.
     \begin{proof}
-        Llamemos $A = [0, 1] \cap \Q$. $A$ es numerable entonces $\exists \sigma: \N \to A$ biyección. Para cada $n \in \N$, sea
-        $A_n = \{ \sigma(1), \cdots, \sigma(n) \}$, $A_n \subset A_{n+1}$ y $\cup_{n=1}^{\infty} A_n = A$.
+        Llamemos $A = [0, 1] \bigcap \Q$. $A$ es numerable entonces $\exists \sigma: \N \to A$ biyección. Para cada $n \in \N$, sea
+        $A_n = \{ \sigma(1), \cdots, \sigma(n) \}$, $A_n \subset A_{n+1}$ y $\bigcup_{n=1}^{\infty} A_n = A$.
         Ahora para cada $n \geq 1$ consideramos:
         $f_n: [0, 1] \to \R$ dada por
         \begin{equation}
@@ -72,7 +72,7 @@ Dado $X$ un conjunto arbitrario no vacío. Sea $\mathcal{P}(X)$ el conjunto de p
     \begin{enumerate}
         \item $\emptyset, X \in \mathfrak{X}$.
         \item Si $A \in X \to A^c \in \mathfrak{X}$.
-        \item Sea $(A_n)_{n \geq 1}$ es una sucesión en $\mathfrak{X} \to \cup_{n=1}^{\infty} A_n \in \mathfrak{X}$.
+        \item Sea $(A_n)_{n \geq 1}$ es una sucesión en $\mathfrak{X} \to \bigcup_{n=1}^{\infty} A_n \in \mathfrak{X}$.
     \end{enumerate}
 \end{definition}
 
@@ -80,7 +80,7 @@ Si $\mathfrak{X}$ es una $\sigma$-álgebra de subconjuntos de $\mathfrak{X}$ el 
 lo llamaremos conjunto $\mathfrak{X}$-medible.
 
 \begin{note}
-    Si $\mathfrak{X}$ es una $\sigma$-álgebra de $X$ y $A_1, \cdots A_n \in \mathfrak{X}$ entonces $\cup_{k=1}^{n} A_k \in \mathfrak{X}$.
+    Si $\mathfrak{X}$ es una $\sigma$-álgebra de $X$ y $A_1, \cdots A_n \in \mathfrak{X}$ entonces $\bigcup_{k=1}^{n} A_k \in \mathfrak{X}$.
     Idea de la demostración: Sea $(B_m)_{m \geq 1}$ la sucesión en $\mathfrak{X}$ definida por \begin{equation}
         B_m = \begin{cases}
             A_m       & 1 \leq m \leq n \\
@@ -90,9 +90,9 @@ lo llamaremos conjunto $\mathfrak{X}$-medible.
 \end{note}
 
 \begin{note}
-    Si $(A_n)_{n \geq 1}$ es una sucesión de una $\sigma$-álgebra $\mathfrak{X}$ entonces $\cap_{n=1}^{\infty} A_n \in \mathfrak{X}$.
+    Si $(A_n)_{n \geq 1}$ es una sucesión de una $\sigma$-álgebra $\mathfrak{X}$ entonces $\bigcap_{n=1}^{\infty} A_n \in \mathfrak{X}$.
     \begin{proof}
-        $\cup_{n \geq 1} A_n^c \in \mathfrak{X} \to (\cap_{n \geq 1} A_n^c)^c \in \mathfrak{X} \to \cup_{n \geq 1} A_n \in \mathfrak{X}$.
+        $\bigcup_{n \geq 1} A_n^c \in \mathfrak{X} \to (\bigcap_{n \geq 1} A_n^c)^c \in \mathfrak{X} \to \bigcup_{n \geq 1} A_n \in \mathfrak{X}$.
     \end{proof}
 \end{note}
 
@@ -112,7 +112,7 @@ lo llamaremos conjunto $\mathfrak{X}$-medible.
 
 \begin{lemma}
     Dado un conjunto $X$, sean $\mathfrak{X}_1, \mathfrak{X}_2$ dos $\sigma$-álgebras de $X$. Entonces $\mathfrak{X}_1 \cap \mathfrak{X}_2$ es una $\sigma$-álgebra de $X$.
-    Más aún si $(\mathfrak{X}_i)_{i \in I}$ es una familia de $\sigma$-álgebras de $X$ entonces $\cap_{i \in I} \mathfrak{X}_i$ es una $\sigma$-álgebra de $X$.
+    Más aún si $(\mathfrak{X}_i)_{i \in I}$ es una familia de $\sigma$-álgebras de $X$ entonces $\bigcap_{i \in I} \mathfrak{X}_i$ es una $\sigma$-álgebra de $X$.
     Demostración, ejercicio.
 \end{lemma}
 
@@ -126,7 +126,7 @@ lo llamaremos conjunto $\mathfrak{X}$-medible.
 
     \begin{proof}
         Sea $\Delta = \{ \mathscr{C} \subseteq \mathcal{P}(X) : \mathscr{C} \text{ es } \sigma \text{-álgebra de } X \text{ y } A \subseteq \mathscr{C} \} \neq \emptyset$ pues $\mathcal{P}(X) \in \Delta$.
-        Llamemos $\mathfrak{X} = \cap_{\mathscr{C} \in \Delta} \mathscr{C} = \{ B \in \mathcal{P}(X) : B \in \mathscr{C} (\forall \mathscr{C} \in \Delta) \}$.
+        Llamemos $\mathfrak{X} = \bigcap_{\mathscr{C} \in \Delta} \mathscr{C} = \{ B \in \mathcal{P}(X) : B \in \mathscr{C} (\forall \mathscr{C} \in \Delta) \}$.
         Veamos que $\mathfrak{X}$ es una $\sigma$-álgebra de $X$.
         \begin{enumerate}
             \item $\emptyset, X \in \mathscr{C} (\forall \mathscr{C} \in \Delta) \to \emptyset, X \in \mathfrak{X}$.
@@ -143,10 +143,10 @@ lo llamaremos conjunto $\mathfrak{X}$-medible.
     A los conjuntos de $\mathcal{B}$ los llamaremos conjuntos Borelianos. Veamos que si $\overline{A} = \{ (a, +\infty) : a \in \R \} \to \sigma(\overline{A}) = \mathcal{B}$.
     \begin{proof}
         \begin{itemize}
-            \item Dado $a \in \R$, $(a, +\infty) = \cup_{n \geq 1} (a, a+n) \in \mathcal{B} \to \overline{A} \subseteq \mathcal{B}$.
+            \item Dado $a \in \R$, $(a, +\infty) = \bigcup_{n \geq 1} (a, a+n) \in \mathcal{B} \to \overline{A} \subseteq \mathcal{B}$.
                   Luego $\sigma(\overline{A}) \subseteq \mathcal{B}$. Por ser $\sigma(\overline{A})$ la mínima $\sigma$-álgebra que contiene a $\overline{A}$.
-            \item Dado $a, b \in \R$, $a < b$. Sabemos que $(a, b] = (a, +\infty) \cap (b, +\infty)^c \in \sigma(\overline{A})$.
-                  Luego $(a, b) = \cup_{n \geq 1} (a, b - \frac{1}{n}] \in \sigma(\overline{A})$. Por lo que $A \subset \sigma(\overline{A})$.
+            \item Dado $a, b \in \R$, $a < b$. Sabemos que $(a, b] = (a, +\infty) \bigcap (b, +\infty)^c \in \sigma(\overline{A})$.
+                  Luego $(a, b) = \bigcup_{n \geq 1} (a, b - \frac{1}{n}] \in \sigma(\overline{A})$. Por lo que $A \subset \sigma(\overline{A})$.
                   $\mathcal{B} = \sigma(A) \subset \sigma(\overline{A})$. Por ser $\sigma(A)$ la mínima $\sigma$-álgebra que contiene a $A$.
         \end{itemize}
     \end{proof}
@@ -162,4 +162,4 @@ Ejercicio demostrar que la $\sigma$-álgebra de Borel está generada también po
     \item $\{ (-\infty, a] : a \in \R \}$.
 \end{enumerate}
 
-Luego, se puede ver que $\{ a \} = \cap_{n \geq 1} [a, a - \frac{1}{n}) \in \mathcal{B}$.
+Luego, se puede ver que $\{ a \} = \bigcap_{n \geq 1} [a, a - \frac{1}{n}) \in \mathcal{B}$.
