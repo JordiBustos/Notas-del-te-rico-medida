@@ -68,20 +68,20 @@ $\upint_a^b f(x) \, \mathrm{d}x = inf \{ s(f, P) : P \text{ partición de } [a, 
 Dado $X$ un conjunto arbitrario no vacío. Sea $\mathcal{P}(X)$ el conjunto de partes de $X$.
 
 \begin{definition}[$\sigma$-álgebra]
-    Una familia $\mathcal{X}$ es una $\sigma$-álgebra si verifica:
+    Una familia $\mathfrak{X}$ es una $\sigma$-álgebra si verifica:
     \begin{enumerate}
-        \item $\emptyset, X \in \mathcal{X}$.
-        \item Si $A \in X \to A^c \in \mathcal{X}$.
-        \item Sea $(A_n)_{n \geq 1}$ es una sucesión en $\mathcal{X} \to \cup_{n=1}^{\infty} A_n \in \mathcal{X}$.
+        \item $\emptyset, X \in \mathfrak{X}$.
+        \item Si $A \in X \to A^c \in \mathfrak{X}$.
+        \item Sea $(A_n)_{n \geq 1}$ es una sucesión en $\mathfrak{X} \to \cup_{n=1}^{\infty} A_n \in \mathfrak{X}$.
     \end{enumerate}
 \end{definition}
 
-Si $\mathcal{X}$ es una $\sigma$-álgebra de subconjuntos de $\mathcal{X}$ el par $(X, \mathcal{X})$ es un espacio medible. A cada $A \in \mathcal{X}$
-lo llamaremos conjunto $\mathcal{X}$-medible.
+Si $\mathfrak{X}$ es una $\sigma$-álgebra de subconjuntos de $\mathfrak{X}$ el par $(X, \mathfrak{X})$ es un espacio medible. A cada $A \in \mathfrak{X}$
+lo llamaremos conjunto $\mathfrak{X}$-medible.
 
 \begin{note}
-    Si $\mathcal{X}$ es una $\sigma$-álgebra de $X$ y $A_1, \cdots A_n \in \mathcal{X}$ entonces $\cup_{k=1}^{n} A_k \in \mathcal{X}$.
-    Idea de la demostración: Sea $(B_m)_{m \geq 1}$ la sucesión en $\mathcal{X}$ definida por \begin{equation}
+    Si $\mathfrak{X}$ es una $\sigma$-álgebra de $X$ y $A_1, \cdots A_n \in \mathfrak{X}$ entonces $\cup_{k=1}^{n} A_k \in \mathfrak{X}$.
+    Idea de la demostración: Sea $(B_m)_{m \geq 1}$ la sucesión en $\mathfrak{X}$ definida por \begin{equation}
         B_m = \begin{cases}
             A_m       & 1 \leq m \leq n \\
             \emptyset & m > n
@@ -90,51 +90,51 @@ lo llamaremos conjunto $\mathcal{X}$-medible.
 \end{note}
 
 \begin{note}
-    Si $(A_n)_{n \geq 1}$ es una sucesión de una $\sigma$-álgebra $\mathcal{X}$ entonces $\cap_{n=1}^{\infty} A_n \in \mathcal{X}$.
+    Si $(A_n)_{n \geq 1}$ es una sucesión de una $\sigma$-álgebra $\mathfrak{X}$ entonces $\cap_{n=1}^{\infty} A_n \in \mathfrak{X}$.
     \begin{proof}
-        $\cup_{n \geq 1} A_n^c \in \mathcal{X} \to (\cap_{n \geq 1} A_n^c)^c \in \mathcal{X} \to \cup_{n \geq 1} A_n \in \mathcal{X}$.
+        $\cup_{n \geq 1} A_n^c \in \mathfrak{X} \to (\cap_{n \geq 1} A_n^c)^c \in \mathfrak{X} \to \cup_{n \geq 1} A_n \in \mathfrak{X}$.
     \end{proof}
 \end{note}
 
 \begin{eg}[$\sigma$-álgebras]
     Dado $X$ cualquiera no vacío.
     \begin{enumerate}
-        \item $\mathcal{X} = \{ \emptyset, X \}$ es una $\sigma$-álgebra.
-        \item $\mathcal{X} = \mathcal{P}(X)$ es una $\sigma$-álgebra.
-        \item Sea $A \neq \emptyset \subset X$. Luego $\mathcal{X} = \{ \emptyset, A, A^c, X \}$ es una $\sigma$-álgebra.
+        \item $\mathfrak{X} = \{ \emptyset, X \}$ es una $\sigma$-álgebra.
+        \item $\mathfrak{X} = \mathcal{P}(X)$ es una $\sigma$-álgebra.
+        \item Sea $A \neq \emptyset \subset X$. Luego $\mathfrak{X} = \{ \emptyset, A, A^c, X \}$ es una $\sigma$-álgebra.
         \item Supongamos que $X$ no es numerable y sea
               \begin{equation}
-                  \mathcal{X} = \{ A \subseteq X : A \text{ es numerable ó } A^c \text{ es numerable} \}
+                  \mathfrak{X} = \{ A \subseteq X : A \text{ es numerable ó } A^c \text{ es numerable} \}
               \end{equation}
-              es una $\sigma$-álgebra. Demostración ejercicio y además $\mathcal{X} \neq \mathcal{P}(X)$.
+              es una $\sigma$-álgebra. Demostración ejercicio y además $\mathfrak{X} \neq \mathcal{P}(X)$.
     \end{enumerate}
 \end{eg}
 
 \begin{lemma}
-    Dado un conjunto $X$, sean $\mathcal{X}_1, \mathcal{X}_2$ dos $\sigma$-álgebras de $X$. Entonces $\mathcal{X}_1 \cap \mathcal{X}_2$ es una $\sigma$-álgebra de $X$.
-    Más aún si $(\mathcal{X}_i)_{i \in I}$ es una familia de $\sigma$-álgebras de $X$ entonces $\cap_{i \in I} \mathcal{X}_i$ es una $\sigma$-álgebra de $X$.
+    Dado un conjunto $X$, sean $\mathfrak{X}_1, \mathfrak{X}_2$ dos $\sigma$-álgebras de $X$. Entonces $\mathfrak{X}_1 \cap \mathfrak{X}_2$ es una $\sigma$-álgebra de $X$.
+    Más aún si $(\mathfrak{X}_i)_{i \in I}$ es una familia de $\sigma$-álgebras de $X$ entonces $\cap_{i \in I} \mathfrak{X}_i$ es una $\sigma$-álgebra de $X$.
     Demostración, ejercicio.
 \end{lemma}
 
 \begin{prop}
     Dado un conjunto $X$, sea $A \neq \emptyset \subseteq \mathcal{P}(X) \to \exists \sigma$-álgebra $\sigma(A)$ que verifica: \begin{enumerate}
         \item $A \subseteq \sigma(A)$.
-        \item $\mathcal{X}$ es $\sigma$-álgebra de $X$ tal que $A \subseteq X \to \sigma(A) \subseteq \mathcal{X}$.
+        \item $\mathfrak{X}$ es $\sigma$-álgebra de $X$ tal que $A \subseteq X \to \sigma(A) \subseteq \mathfrak{X}$.
         \item $\sigma(A)$ es la única que verifica ambas propiedades en simultáneo.
     \end{enumerate}
     La llamaremos $\sigma$-álgebra generada por $A$.
 
     \begin{proof}
         Sea $\Delta = \{ \mathscr{C} \subseteq \mathcal{P}(X) : \mathscr{C} \text{ es } \sigma \text{-álgebra de } X \text{ y } A \subseteq \mathscr{C} \} \neq \emptyset$ pues $\mathcal{P}(X) \in \Delta$.
-        Llamemos $\mathcal{X} = \cap_{\mathscr{C} \in \Delta} \mathscr{C} = \{ B \in \mathcal{P}(X) : B \in \mathscr{C} (\forall \mathscr{C} \in \Delta) \}$.
-        Veamos que $\mathcal{X}$ es una $\sigma$-álgebra de $X$.
+        Llamemos $\mathfrak{X} = \cap_{\mathscr{C} \in \Delta} \mathscr{C} = \{ B \in \mathcal{P}(X) : B \in \mathscr{C} (\forall \mathscr{C} \in \Delta) \}$.
+        Veamos que $\mathfrak{X}$ es una $\sigma$-álgebra de $X$.
         \begin{enumerate}
-            \item $\emptyset, X \in \mathscr{C} (\forall \mathscr{C} \in \Delta) \to \emptyset, X \in \mathcal{X}$.
-            \item Sea $A \in \mathcal{X} \to (\forall \mathscr{C} \in \Delta) A \in \mathscr{C} \to A^c \in \mathscr{C} (\forall \mathscr{C} \in \Delta) \to A^c \in \mathcal{X}$.
-            \item Sea $(A_n)_{n \geq 1}$ una sucesión en $\mathcal{X}$ el argumento es análogo a los dos anteriores.
+            \item $\emptyset, X \in \mathscr{C} (\forall \mathscr{C} \in \Delta) \to \emptyset, X \in \mathfrak{X}$.
+            \item Sea $A \in \mathfrak{X} \to (\forall \mathscr{C} \in \Delta) A \in \mathscr{C} \to A^c \in \mathscr{C} (\forall \mathscr{C} \in \Delta) \to A^c \in \mathfrak{X}$.
+            \item Sea $(A_n)_{n \geq 1}$ una sucesión en $\mathfrak{X}$ el argumento es análogo a los dos anteriores.
         \end{enumerate}
-        $\therefore$ $\mathcal{X}$ es una $\sigma$-álgebra que verifica ambas condiciones.
-        Supongamos que existe otra $\overline{\mathcal{X}}$ $\sigma$-álgebra que verifica las dos condiciones por la propiedad uno y dos podemos deducir que $\mathcal{X} \subseteq \overline{\mathcal{X}}$ y $\overline{\mathcal{X}} \subseteq \mathcal{X}$.
+        $\therefore$ $\mathfrak{X}$ es una $\sigma$-álgebra que verifica ambas condiciones.
+        Supongamos que existe otra $\overline{\mathfrak{X}}$ $\sigma$-álgebra que verifica las dos condiciones por la propiedad uno y dos podemos deducir que $\mathfrak{X} \subseteq \overline{\mathfrak{X}}$ y $\overline{\mathfrak{X}} \subseteq \mathfrak{X}$.
     \end{proof}
 \end{prop}
 
