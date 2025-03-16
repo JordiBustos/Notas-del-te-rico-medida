@@ -70,7 +70,7 @@ Dado $X$ un conjunto arbitrario no vacío. Sea $\mathcal{P}(X)$ el conjunto de p
 \begin{definition}[$\sigma$-álgebra]
     Una familia $\mathfrak{X}$ es una $\sigma$-álgebra si verifica:
     \begin{enumerate}
-        \item $\emptyset, X \in \mathfrak{X}$.
+        \item $\O, X \in \mathfrak{X}$.
         \item Si $A \in X \to A^c \in \mathfrak{X}$.
         \item Sea $(A_n)_{n \geq 1}$ es una sucesión en $\mathfrak{X} \to \bigcup_{n=1}^{\infty} A_n \in \mathfrak{X}$.
     \end{enumerate}
@@ -84,7 +84,7 @@ lo llamaremos conjunto $\mathfrak{X}$-medible.
     Idea de la demostración: Sea $(B_m)_{m \geq 1}$ la sucesión en $\mathfrak{X}$ definida por \begin{equation}
         B_m = \begin{cases}
             A_m       & 1 \leq m \leq n \\
-            \emptyset & m > n
+            \O & m > n
         \end{cases}
     \end{equation}
 \end{note}
@@ -99,9 +99,9 @@ lo llamaremos conjunto $\mathfrak{X}$-medible.
 \begin{eg}[$\sigma$-álgebras]
     Dado $X$ cualquiera no vacío.
     \begin{enumerate}
-        \item $\mathfrak{X} = \{ \emptyset, X \}$ es una $\sigma$-álgebra.
+        \item $\mathfrak{X} = \{ \O, X \}$ es una $\sigma$-álgebra.
         \item $\mathfrak{X} = \mathcal{P}(X)$ es una $\sigma$-álgebra.
-        \item Sea $A \neq \emptyset \subset X$. Luego $\mathfrak{X} = \{ \emptyset, A, A^c, X \}$ es una $\sigma$-álgebra.
+        \item Sea $A \neq \O \subset X$. Luego $\mathfrak{X} = \{ \O, A, A^c, X \}$ es una $\sigma$-álgebra.
         \item Supongamos que $X$ no es numerable y sea
               \begin{equation}
                   \mathfrak{X} = \{ A \subseteq X : A \text{ es numerable ó } A^c \text{ es numerable} \}
@@ -119,7 +119,7 @@ lo llamaremos conjunto $\mathfrak{X}$-medible.
 \clearpage
 
 \begin{prop}
-    Dado un conjunto $X$, sea $A \neq \emptyset \subseteq \mathcal{P}(X) \to \exists \sigma$-álgebra $\sigma(A)$ que verifica: \begin{enumerate}
+    Dado un conjunto $X$, sea $A \neq \O \subseteq \mathcal{P}(X) \to \exists \sigma$-álgebra $\sigma(A)$ que verifica: \begin{enumerate}
         \item $A \subseteq \sigma(A)$.
         \item $\mathfrak{X}$ es $\sigma$-álgebra de $X$ tal que $A \subseteq X \to \sigma(A) \subseteq \mathfrak{X}$.
         \item $\sigma(A)$ es la única que verifica ambas propiedades en simultáneo.
@@ -127,11 +127,11 @@ lo llamaremos conjunto $\mathfrak{X}$-medible.
     La llamaremos $\sigma$-álgebra generada por $A$.
 
     \begin{proof}
-        Sea $\Delta = \{ \mathscr{C} \subseteq \mathcal{P}(X) : \mathscr{C} \text{ es } \sigma \text{-álgebra de } X \text{ y } A \subseteq \mathscr{C} \} \neq \emptyset$ pues $\mathcal{P}(X) \in \Delta$.
+        Sea $\Delta = \{ \mathscr{C} \subseteq \mathcal{P}(X) : \mathscr{C} \text{ es } \sigma \text{-álgebra de } X \text{ y } A \subseteq \mathscr{C} \} \neq \O$ pues $\mathcal{P}(X) \in \Delta$.
         Llamemos $\mathfrak{X} = \bigcap_{\mathscr{C} \in \Delta} \mathscr{C} = \{ B \in \mathcal{P}(X) : B \in \mathscr{C} (\forall \mathscr{C} \in \Delta) \}$.
         Veamos que $\mathfrak{X}$ es una $\sigma$-álgebra de $X$.
         \begin{enumerate}
-            \item $\emptyset, X \in \mathscr{C} (\forall \mathscr{C} \in \Delta) \to \emptyset, X \in \mathfrak{X}$.
+            \item $\O, X \in \mathscr{C} (\forall \mathscr{C} \in \Delta) \to \O, X \in \mathfrak{X}$.
             \item Sea $A \in \mathfrak{X} \to (\forall \mathscr{C} \in \Delta) A \in \mathscr{C} \to A^c \in \mathscr{C} (\forall \mathscr{C} \in \Delta) \to A^c \in \mathfrak{X}$.
             \item Sea $(A_n)_{n \geq 1}$ una sucesión en $\mathfrak{X}$ el argumento es análogo a los dos anteriores.
         \end{enumerate}
