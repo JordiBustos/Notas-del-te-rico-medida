@@ -56,8 +56,8 @@ $\upint_a^b f(x) \, \mathrm{d}x = inf \{ s(f, P) : P \text{ partición de } [a, 
         $f_n$ es integrable Riemann (queda como ejercicio demostrarlo) ya que es continua salvo en los puntos de $A_n$ y
         los límites laterales son siempre cero.
         Veamos ahora que $f_n \to f$. Sea $x \in [0, 1]$ \begin{enumerate}
-            \item Si $x \in A \to x \in A_{n_0}, n_0 \in \N \to (\forall n > n_0) x \in A_n \to (\forall n > n_0) f_n(x) = 1 \to f_n(x) \to f(x) = 1$.
-            \item Si $x \notin A \to (\forall n \in \N) x \notin A_n \to (\forall n \in \N) f_n(x) = 0 \to f_n(x) \to f(x) = 0$.
+            \item Si $x \in A \Rightarrow x \in A_{n_0}, n_0 \in \N \Rightarrow (\forall n > n_0) x \in A_n \Rightarrow (\forall n > n_0) f_n(x) = 1 \Rightarrow f_n(x) \to f(x) = 1$.
+            \item Si $x \notin A \Rightarrow (\forall n \in \N) x \notin A_n \Rightarrow (\forall n \in \N) f_n(x) = 0 \Rightarrow f_n(x) \to f(x) = 0$.
         \end{enumerate} $\therefore f_n \to f$.
         Si conocieramos $l(A)$ y $l([0, 1] \setminus A)$ podríamos definir $\int f = 1 \times l(A) + 0 \times l([0, 1] \setminus A)$.
     \end{proof}
@@ -72,7 +72,7 @@ Dado $X$ un conjunto arbitrario no vacío. Sea $\mathcal{P}(X)$ el conjunto de p
     \begin{enumerate}
         \item $\O, X \in \mathfrak{X}$.
         \item Si $A \in X \to A^c \in \mathfrak{X}$.
-        \item Sea $(A_n)_{n \geq 1}$ es una sucesión en $\mathfrak{X} \to \bigcup_{n=1}^{\infty} A_n \in \mathfrak{X}$.
+        \item Sea $(A_n)_{n \geq 1}$ es una sucesión en $\mathfrak{X} \Rightarrow \bigcup_{n=1}^{\infty} A_n \in \mathfrak{X}$.
     \end{enumerate}
 \end{definition}
 
@@ -83,8 +83,8 @@ lo llamaremos conjunto $\mathfrak{X}$-medible.
     Si $\mathfrak{X}$ es una $\sigma$-álgebra de $X$ y $A_1, \cdots A_n \in \mathfrak{X}$ entonces $\bigcup_{k=1}^{n} A_k \in \mathfrak{X}$.
     Idea de la demostración: Sea $(B_m)_{m \geq 1}$ la sucesión en $\mathfrak{X}$ definida por \begin{equation}
         B_m = \begin{cases}
-            A_m       & 1 \leq m \leq n \\
-            \O & m > n
+            A_m & 1 \leq m \leq n \\
+            \O  & m > n
         \end{cases}
     \end{equation}
 \end{note}
