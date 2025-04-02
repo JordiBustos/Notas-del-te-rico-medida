@@ -86,22 +86,22 @@ $\beta_n$ es numerable pues el conjunto de índices que enumera a $\beta_n$ es
 \clearpage
 
 \begin{prop}
-    Dado un espacio medible $(X, \mathfrak{X})$ y sea $X_0 \subseteq \mathfrak{X}$, entonces
+    Dado un espacio medible $(X, \mf{X})$ y sea $X_0 \subseteq \mf{X}$, entonces
     \begin{enumerate}
-        \item $\mathfrak{X}_0 = \{ A \subseteq X_0 : A = E \cap X_0 \text{ para algún } E \in \mathfrak{X} \}$ es $\sigma$-álgebra de $X_0$. En particular,
-        si $X_0 \in \mathfrak{X} \to \mathfrak{X}_0 = \{ A \subseteq X_0 : A \in \mathfrak{X} \}$, la demostración queda como ejercicio.
-        \item Si $\mathcal{A}$ es una familia en partes de $X$ tal que $\mathfrak{X} = \sigma(\mathcal{A})$ entonces $\mathfrak{X}_0 = \sigma(\mathcal{A}_0)$ donde
+        \item $\mf{X}_0 = \{ A \subseteq X_0 : A = E \cap X_0 \text{ para algún } E \in \mf{X} \}$ es $\sigma$-álgebra de $X_0$. En particular,
+        si $X_0 \in \mf{X} \to \mf{X}_0 = \{ A \subseteq X_0 : A \in \mf{X} \}$, la demostración queda como ejercicio.
+        \item Si $\mathcal{A}$ es una familia en partes de $X$ tal que $\mf{X} = \sigma(\mathcal{A})$ entonces $\mf{X}_0 = \sigma(\mathcal{A}_0)$ donde
         $\mathcal{A}_0 = \{ A_0 \subseteq X_0 : A_0 = A \cap X_0 \text{ para algún } A \in \mathcal{A} \}$.
         \begin{proof}
-            Veamos primero que $\mathcal{A}_0 \subseteq \mathfrak{X}_0$. Si $A_0 \in \mathcal{A}_0 \to \exists A \in \mathcal{A} : A_0 = \mathcal{A} \cap X_0$.
-            Como $A \in \mathcal{A} \subseteq \sigma(\mathcal{A}) = \mathfrak{X}$ resulta que $A_0 = A \cap X_0 \in \mathfrak{X}_0$.
-            Entonces $\mathcal{A}_0 \subseteq \mathfrak{X}_0$. Por lo tanto $\sigma(\mathcal{A}_0) \subseteq \mathfrak{X}_0$.
+            Veamos primero que $\mathcal{A}_0 \subseteq \mf{X}_0$. Si $A_0 \in \mathcal{A}_0 \to \exists A \in \mathcal{A} : A_0 = \mathcal{A} \cap X_0$.
+            Como $A \in \mathcal{A} \subseteq \sigma(\mathcal{A}) = \mf{X}$ resulta que $A_0 = A \cap X_0 \in \mf{X}_0$.
+            Entonces $\mathcal{A}_0 \subseteq \mf{X}_0$. Por lo tanto $\sigma(\mathcal{A}_0) \subseteq \mf{X}_0$.
             
-            Ahora veamos que $\mathfrak{X}_0 \subseteq \sigma(\mathcal{A}_0)$.
-            Consideramos la clase $\mathcal{G} = \{ E \subseteq X : E \cap X_0 \in \sigma(\mathcal{A}_0) \}$ y veamos que $\mathfrak{X} \subseteq \mathcal{G}$.
+            Ahora veamos que $\mf{X}_0 \subseteq \sigma(\mathcal{A}_0)$.
+            Consideramos la clase $\mathcal{G} = \{ E \subseteq X : E \cap X_0 \in \sigma(\mathcal{A}_0) \}$ y veamos que $\mf{X} \subseteq \mathcal{G}$.
             Alcanza con probar que $\mathcal{A} \subseteq \mathcal{G}$. Pues si $A \in \mathcal{A}$, $A \cap X_0 \in \mathcal{A}_0 \subseteq \sigma(\mathcal{A}_0) \to A \in \mathcal{G}$.
-            Si probamos que $G$ es una $\sigma$-álgebra, tendríamos que $\mathcal{A} \subseteq \mathcal{G}$ y $\sigma(\mathcal{A}) \subseteq \mathcal{G}$ y $\sigma(\mathcal{A}) = \mathfrak{X}$.
-            Luego $\mathfrak{X}_0 \subseteq \sigma(\mathcal{A}_0)$.
+            Si probamos que $G$ es una $\sigma$-álgebra, tendríamos que $\mathcal{A} \subseteq \mathcal{G}$ y $\sigma(\mathcal{A}) \subseteq \mathcal{G}$ y $\sigma(\mathcal{A}) = \mf{X}$.
+            Luego $\mf{X}_0 \subseteq \sigma(\mathcal{A}_0)$.
         \end{proof}
     \end{enumerate}
 \end{prop}

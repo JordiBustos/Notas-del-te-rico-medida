@@ -1,17 +1,17 @@
 \section{Medidas}
 
 \subsection{Motivación}
-Sea $\phi: X \to [0, +\infty]$ con $Im(\phi) = \{ y_1, \cdots, y_m \}$. Si $\phi^{-1}(y_i) \in \mathfrak{X}$ y conocemos
+Sea $\phi: X \to [0, +\infty]$ con $Im(\phi) = \{ y_1, \cdots, y_m \}$. Si $\phi^{-1}(y_i) \in \mf{X}$ y conocemos
 $\mu(\phi^{-1}(y_i)) \in [0, +\infty]$ (la medida de cada conjunto) podemos definir \begin{align*}
     \int \phi \,d\mu = \sum_{i=1}^m y_i \cdot \mu(\phi^{-1}(y_i))
 \end{align*}
 
-Si $f: X \to [0, +\infty]$ es $\mathfrak{X}$-medible, $\exists$ una sucesión $(\phi_n)_{n \geq 1}$ con funciones así tal que $\phi_n \to f$. Entonces podremos definir
+Si $f: X \to [0, +\infty]$ es $\mf{X}$-medible, $\exists$ una sucesión $(\phi_n)_{n \geq 1}$ con funciones así tal que $\phi_n \to f$. Entonces podremos definir
 \begin{align*}
     \int f \,d\mu = \lim_{n \to \infty} \int \phi_n \,d\mu
 \end{align*}
 
-Dado un espacio medible $(X, \mathfrak{X})$, vamos a considerar ciertas funciones $\mu : \mathfrak{X} \to [0, +\infty] : $ el valor $\mu(E)$ para cada $E \in \mathfrak{X}$
+Dado un espacio medible $(X, \mf{X})$, vamos a considerar ciertas funciones $\mu : \mf{X} \to [0, +\infty] : $ el valor $\mu(E)$ para cada $E \in \mf{X}$
 esté motivado por las nociones de longitud, área, volumen, probabilidad, masa, etc.
 
 \clearpage
@@ -45,43 +45,43 @@ esté motivado por las nociones de longitud, área, volumen, probabilidad, masa,
 \subsection{Definición de medida}
 
 \begin{definition}[Medida]
-    Dado un espacio medible $(X, \mathfrak{X})$, una medida en $X$ es una función $\mu : \mathfrak{X} \to [0, +\infty]$ tal que:
+    Dado un espacio medible $(X, \mf{X})$, una medida en $X$ es una función $\mu : \mf{X} \to [0, +\infty]$ tal que:
     \begin{enumerate}
-        \item $\mu(\varnothing) = 0$.
-        \item ($\sigma$-aditividad) Si $(E_n)_{n \geq 1}$ es una sucesión en $\mathfrak{X}$, dos a dos disjuntos $\Rightarrow$ \begin{align*}
+        \item $\mu(\O) = 0$.
+        \item ($\sigma$-aditividad) Si $(E_n)_{n \geq 1}$ es una sucesión en $\mf{X}$, dos a dos disjuntos $\Rightarrow$ \begin{align*}
                   \mu(\bigcup_{n \geq 1} E_n) = \sum_{n \geq 1} \mu(E_n)
               \end{align*}
     \end{enumerate}
 \end{definition}
 
 \begin{note}
-    Si $A_1, \cdots A_n \in \mathfrak{X}$ son conjuntos dos a dos disjuntos entonces \begin{align*}
+    Si $A_1, \cdots A_n \in \mf{X}$ son conjuntos dos a dos disjuntos entonces \begin{align*}
         \mu(\bigcup_{i = 1}^n A_i) = \sum_{i = 1}^n \mu(A_i)
     \end{align*}
-    Esto se deduce de la propiedad de $\sigma$-aditividad, pues construimos la sucesión $(E_n)_{n \geq 1}$ como $A_1, A_2, \cdots, A_n, \varnothing, \varnothing, \cdots$.
+    Esto se deduce de la propiedad de $\sigma$-aditividad, pues construimos la sucesión $(E_n)_{n \geq 1}$ como $A_1, A_2, \cdots, A_n, \O, \O, \cdots$.
 \end{note}
 
 \begin{definition}[Medida finita]
-    Una medida es finita si $\mu(E) < +\infty \quad \forall E \in \mathfrak{X}$.
+    Una medida es finita si $\mu(E) < +\infty \quad \forall E \in \mf{X}$.
 \end{definition}
 
 \begin{definition}[Medida $\sigma$-finita]
-    Una medida es $\sigma$-finita si $\exists (E_n)_{n \geq 1} \subseteq \mathfrak{X}$ tal que: $X = \bigcup_{n \geq 1} E_n$ y $\mu(E_n) < +\infty \quad \forall n \geq 1$.
+    Una medida es $\sigma$-finita si $\exists (E_n)_{n \geq 1} \subseteq \mf{X}$ tal que: $X = \bigcup_{n \geq 1} E_n$ y $\mu(E_n) < +\infty \quad \forall n \geq 1$.
 \end{definition}
 
 \begin{eg}
-    Si $X \neq \varnothing$, $\mathfrak{X} = P(X)$ y tomamos $\mu : P(X) \to [0, +\infty]$ tal que $\mu(E) = 0 \quad \forall E \in P(X)$ y también es medida si la definimos como \begin{align*}
+    Si $X \neq \O$, $\mf{X} = P(X)$ y tomamos $\mu : P(X) \to [0, +\infty]$ tal que $\mu(E) = 0 \quad \forall E \in P(X)$ y también es medida si la definimos como \begin{align*}
         \mu(E) = \begin{cases}
-                     0       & \text{si } E = \varnothing    \\
-                     +\infty & \text{si } E \neq \varnothing
+                     0       & \text{si } E = \O    \\
+                     +\infty & \text{si } E \neq \O
                  \end{cases}
     \end{align*}
     Luego no es finita, ni $\sigma$-finita.
 \end{eg}
 
 \begin{eg}
-    Sea $(X, \mathfrak{X})$ un espacio medible y fijemos $x_0 \in X \neq \varnothing$.
-    Sea $\mu : \mathfrak{X} \to [0, +\infty]$ tal que \begin{align*}
+    Sea $(X, \mf{X})$ un espacio medible y fijemos $x_0 \in X \neq \O$.
+    Sea $\mu : \mf{X} \to [0, +\infty]$ tal que \begin{align*}
         \mu(E) = \begin{cases}
                      0 & \text{si } x_0 \notin E \\
                      1 & \text{si } x_0 \in E
@@ -94,7 +94,7 @@ esté motivado por las nociones de longitud, área, volumen, probabilidad, masa,
 \clearpage
 
 \begin{eg}
-    Sea $X = \N$, $\mathfrak{X} = P(\N)$ y la medida de conteo $\mu : P(\N) \to [0, +\infty]$ tal que \begin{align*}
+    Sea $X = \N$, $\mf{X} = P(\N)$ y la medida de conteo $\mu : P(\N) \to [0, +\infty]$ tal que \begin{align*}
         \mu(E) = \begin{cases}
                      +\infty        & \text{si } E \text{ es infinito}           \\
                      \text{card}(E) & \text{si } E = \{ x_1, x_2, \cdots, x_n \}
@@ -104,26 +104,26 @@ esté motivado por las nociones de longitud, área, volumen, probabilidad, masa,
 \end{eg}
 
 \begin{eg}
-    Sea $(X, \mathfrak{X})$ un espacio medible, $X$ con infinitos elementos, sea $(x_n)_{n \geq 1}$ una sucesión en $X$ con $x_n \neq x_m \quad \forall n \neq m$ y
-    $(a_n)_{n \geq 1}$ otra sucesión en $[0, +\infty]$. Definimos $\mu : \mathfrak{X} \to [0, +\infty]$ como \begin{align*}
+    Sea $(X, \mf{X})$ un espacio medible, $X$ con infinitos elementos, sea $(x_n)_{n \geq 1}$ una sucesión en $X$ con $x_n \neq x_m \quad \forall n \neq m$ y
+    $(a_n)_{n \geq 1}$ otra sucesión en $[0, +\infty]$. Definimos $\mu : \mf{X} \to [0, +\infty]$ como \begin{align*}
         \mu(E) & = \sum_{n \in \N \text{ } : \text{ } x_n \in E} a_n \\
-               & E \in \mathfrak{X}
+               & E \in \mf{X}
     \end{align*}
     Queda como ejercicio ver que es medida.
-    Si $\mathfrak{X}$ contiene a los conjuntos unitarios $\{ x_n \}$ con $n \in \N$ entonces $\mu$ es $\sigma$-finita pues $X = (\bigcup_{n \geq 1} \{ x_n \}) \cup (X - \bigcup_{n \geq 1} \{ x_n \})$ ambos medibles, luego
+    Si $\mf{X}$ contiene a los conjuntos unitarios $\{ x_n \}$ con $n \in \N$ entonces $\mu$ es $\sigma$-finita pues $X = (\bigcup_{n \geq 1} \{ x_n \}) \cup (X - \bigcup_{n \geq 1} \{ x_n \})$ ambos medibles, luego
     $\mu(\{ x_n \}) = a_n$ y $\mu(X - \bigcup_{n \geq 1} \{ x_n \}) = 0$.
     Además es $\sigma$-finita $\iff \sum_{n \geq 1} a_n < +\infty$
 \end{eg}
 
 \begin{eg}[Medida de Lebesgue]
-    Si $X = \R$ y $\mathfrak{X} = \mathcal{B}$, más adelante probaremos que $\exists !$ medida $\lambda : \mathcal{B} \to [0, +\infty]$ tal que:
+    Si $X = \R$ y $\mf{X} = \mathcal{B}$, más adelante probaremos que $\exists !$ medida $\lambda : \mathcal{B} \to [0, +\infty]$ tal que:
     $\lambda((a, b)) = b-a$ con $a, b \in \R$ y $a < b$. \\
     Es $\sigma$-finita pues $\R = \bigcup_{n \geq 1} (-n, n)$ y $\lambda((-n, n)) = 2n < +\infty$, pero no es finita pues $\lambda(\R) = +\infty$.
     Notemos que $\lambda$ puede extenderse a una $\sigma$-álgebra de $\R$ más grande que $\mathcal{B}$, pero no puede extenderse a $P(\R)$.
 \end{eg}
 
 \begin{eg}[Medida n-dimensional de Lebesgue]
-    Sea $X = \R^n$ y $ \mathfrak{X} = \mathcal{B}_n$, tenemos que $\exists!$ medida $\lambda : \mathcal{B}_n \to [0, +\infty]$ tal que:
+    Sea $X = \R^n$ y $ \mf{X} = \mathcal{B}_n$, tenemos que $\exists!$ medida $\lambda : \mathcal{B}_n \to [0, +\infty]$ tal que:
     \begin{align*}
         \lambda_n(\prod_{i = 1}^n (a_i, b_i)) = \prod_{i = 1}^n (b_i - a_i) \quad \forall a_i, b_i \in \R \text{ y } a_i < b_i
     \end{align*}
@@ -132,7 +132,7 @@ esté motivado por las nociones de longitud, área, volumen, probabilidad, masa,
 \clearpage
 
 \begin{eg}[Medida de Borel - Stieltjes generada por f]
-    Si $X = \R$, $\mathfrak{X} = \mathcal{B}$, fijemos $f: \R \to \R$ monótona no decreciente y continua. Probaremos que existe una única medida $\lambda_f : \mathcal{B} \to [0, +\infty]$ :
+    Si $X = \R$, $\mf{X} = \mathcal{B}$, fijemos $f: \R \to \R$ monótona no decreciente y continua. Probaremos que existe una única medida $\lambda_f : \mathcal{B} \to [0, +\infty]$ :
     \begin{align*}
         \lambda_f((a, b)) = f(b) - f(a) \quad \forall a, b \in \R \text{ y } a < b
     \end{align*}
@@ -140,10 +140,10 @@ esté motivado por las nociones de longitud, área, volumen, probabilidad, masa,
 \end{eg}
 
 \begin{lemma}
-    Dado un espacio medible $(X, \mathfrak{X})$ y una medida $\mu : X \to [0, +\infty]$. Si $F$, $E \in \mathfrak{X}$ y $E \subseteq F \Rightarrow \mu(E) \leq \mu(F)$.
+    Dado un espacio medible $(X, \mf{X})$ y una medida $\mu : X \to [0, +\infty]$. Si $F$, $E \in \mf{X}$ y $E \subseteq F \Rightarrow \mu(E) \leq \mu(F)$.
     Si además $\mu(E) < +\infty \Rightarrow \mu(F - E) = \mu(F) - \mu(E)$.
     \begin{proof}
-        Como $E \subseteq F$ entonces $F = E \cup (F - E)$, además $F - E = F \cap E^c \in \mathfrak{X}$ y $E \cap (F - E) = \varnothing$.
+        Como $E \subseteq F$ entonces $F = E \cup (F - E)$, además $F - E = F \cap E^c \in \mf{X}$ y $E \cap (F - E) = \O$.
         Entonces $\mu(F) = \mu(E) + \mu(F - E) \geq \mu(E)$.
         Si $\mu(E) < +\infty$ entonces $\mu(F)$, $\mu(F - E)$ son o ambos finitos o ambos infinitos, luego $\mu(F - E) = \mu(F) - \mu(E)$.
     \end{proof}
@@ -156,7 +156,7 @@ esté motivado por las nociones de longitud, área, volumen, probabilidad, masa,
 \clearpage
 
 \begin{lemma}
-    Si $(A_n)_{n \geq 1}$ es una sucesión cualquiera en $\mathfrak{X}$ entonces \begin{align*}
+    Si $(A_n)_{n \geq 1}$ es una sucesión cualquiera en $\mf{X}$ entonces \begin{align*}
         \mu(\bigcup_{n \geq 1} A_n) \leq \sum_{n \geq 1} \mu(A_n)
     \end{align*}
     \begin{proof}
@@ -167,7 +167,7 @@ esté motivado por las nociones de longitud, área, volumen, probabilidad, masa,
             F_n    & := A_n - \bigcup_{i = 1}^{n-1} A_i \quad \forall n \geq 2 \\
                    & = A_n - ( \bigcup_{k = 1}^{n-1} F_k )                     \\
         \end{align*}
-        Resulta que es una sucesión en $\mathfrak{X}$ de conjuntos disjuntos dos a dos ya que si $n > m \Rightarrow F_m \cap F_n = (A_m - \bigcup_{k = 1}^{n-1} F_k) \cap F_n = \varnothing$. \\
+        Resulta que es una sucesión en $\mf{X}$ de conjuntos disjuntos dos a dos ya que si $n > m \Rightarrow F_m \cap F_n = (A_m - \bigcup_{k = 1}^{n-1} F_k) \cap F_n = \O$. \\
         Luego, \begin{align*}
             \bigcup_{n \geq 1} A_n & = \bigcup_{n \geq 1} F_n \text{, y }                      \\
                                    & \mu(\bigcup_{n \geq 1} A_n) = \mu(\bigcup_{n \geq 1} F_n) \\
@@ -179,9 +179,9 @@ esté motivado por las nociones de longitud, área, volumen, probabilidad, masa,
 \clearpage
 
 \begin{lemma}
-    Sea $\mu$ una medida sobre $\mathfrak{X}$:
+    Sea $\mu$ una medida sobre $\mf{X}$:
     \begin{enumerate}
-        \item Si $(E_n)_{n \geq 1}$ es una sucesión en $\mathfrak{X}$ creciente $\Rightarrow$ $\mu(\bigcup_{n \geq 1} E_n) = \lim_{n \to \infty} \mu(E_n)$.
+        \item Si $(E_n)_{n \geq 1}$ es una sucesión en $\mf{X}$ creciente $\Rightarrow$ $\mu(\bigcup_{n \geq 1} E_n) = \lim_{n \to \infty} \mu(E_n)$.
         \item Si $(F_n)_{n \geq 1}$ es una sucesión decreciente y $\mu(F_1) < +\infty \Rightarrow$ \begin{align*}
                   \mu(\bigcap_{n \geq 1} F_n) = \lim_{n \to \infty} \mu(F_n)
               \end{align*}
@@ -190,7 +190,7 @@ esté motivado por las nociones de longitud, área, volumen, probabilidad, masa,
 
     \begin{proof}
         Veamos el primer caso. \\
-        $\forall n \in \N$ sea $A_n = E_n - E_{n - 1}$, con $E_0 = \varnothing$ y $(A_n)_{n \geq 1}$ es una sucesión en $\mathfrak{X}$ tal que $A_i \cap A_j = \varnothing \quad \text{si } i \neq j$.
+        $\forall n \in \N$ sea $A_n = E_n - E_{n - 1}$, con $E_0 = \O$ y $(A_n)_{n \geq 1}$ es una sucesión en $\mf{X}$ tal que $A_i \cap A_j = \O \quad \text{si } i \neq j$.
         Entonces \begin{align*}
             \bigcup_{i = 1}^n A_i & = E_n \text{, y además } \bigcup_{n \geq 1} A_n = \bigcup_{n \geq 1} E_n
         \end{align*}
@@ -198,7 +198,7 @@ esté motivado por las nociones de longitud, área, volumen, probabilidad, masa,
             \mu(\bigcup_{n \geq 1} E_n) & = \mu(\bigcup_{n \geq 1} A_n) = \sum_{n \geq 1} \mu(A_n)                                                                          \\
                                         & = \lim_{n \to +\infty} \sum_{i = 1}^n \mu(A_i) = \lim_{n \to +\infty} \mu(\bigcup_{i = 1}^n A_i)  = \lim_{n \to +\infty} \mu(E_n) \\
         \end{align*}
-        Para el segundo caso si $\mu(F_1) < +\infty$ y $\forall n \in \N$ definimos $E_n = F_1 - F_n \Rightarrow (E_n)_{n \geq 1}$ es una sucesión creciente en $\mathfrak{X}$ tal que \begin{align*}
+        Para el segundo caso si $\mu(F_1) < +\infty$ y $\forall n \in \N$ definimos $E_n = F_1 - F_n \Rightarrow (E_n)_{n \geq 1}$ es una sucesión creciente en $\mf{X}$ tal que \begin{align*}
             \bigcup_{n \geq 1} E_n = \bigcup_{n \geq 1} F_1 \cap F_n^c = F_1 \cap (\bigcup_{n \geq 1} F_n^c) = F_1 \cap (\bigcap_{n \geq 1} F_n)^c & = F_1 - \bigcap_{n \geq 1} F_n
         \end{align*}
         \begin{align*}
@@ -214,8 +214,8 @@ esté motivado por las nociones de longitud, área, volumen, probabilidad, masa,
 \clearpage
 
 Notemos que en el segundo caso la condición $\mu(F_1) < +\infty$ se puede reemplazar por $\mu(F_{n_0}) < +\infty$ para algún $n_0 \geq 1$, pero no puede omitirse.
-Por ejemplo si $X = \R$ y $\mathfrak{X} = \mathcal{B}$ y $\mu = \lambda$ la medida de Lebesgue, entonces llamemos $F_n = (n, +\infty)$ en este caso
-$\mu(F_n) = +\infty$ y $\mu(\bigcap_{n \geq 1} F_n) = \varnothing$.
+Por ejemplo si $X = \R$ y $\mf{X} = \mathcal{B}$ y $\mu = \lambda$ la medida de Lebesgue, entonces llamemos $F_n = (n, +\infty)$ en este caso
+$\mu(F_n) = +\infty$ y $\mu(\bigcap_{n \geq 1} F_n) = \O$.
 
 Aplicando estas propiedades para la medida de Lebesgue $\lambda$ podemos probar que si $I$ es un intervalo de $\R$ $(a, b) : a, b \in \overline{\R}$ y $a<b$ o $[a, b]$, $(a, b]$, $[a, b)$.
 

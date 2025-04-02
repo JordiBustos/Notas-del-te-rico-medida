@@ -19,19 +19,21 @@
 \newcommand\N{\ensuremath{\mathbb{N}}}
 \newcommand\R{\ensuremath{\mathbb{R}}}
 \newcommand\Z{\ensuremath{\mathbb{Z}}}
-\renewcommand\O{\ensuremath{\emptyset}}
+\renewcommand\O{\ensuremath{\varnothing}}
 \newcommand\Q{\ensuremath{\mathbb{Q}}}
 \newcommand\C{\ensuremath{\mathbb{C}}}
 \newcommand\e{\ensuremath{\varepsilon}}
+\newcommand{\mf}[1]{\mathfrak{#1}}
+\newcommand{\mc}[1]{\mathcal{#1}}
 
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
 % \norm{ \biggl(\sum_{n=1}^N \mathbf{P}_{n}\biggr) }
 
 \def\upint{\mathchoice%
-    {\mkern13mu\overline{\vphantom{\intop}\mkern7mu}\mkern-20mu}%
-    {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
-    {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
-    {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
+  {\mkern13mu\overline{\vphantom{\intop}\mkern7mu}\mkern-20mu}%
+  {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
+  {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
+  {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
   \int}
 \def\lowint{\mkern3mu\underline{\vphantom{\intop}\mkern7mu}\mkern-10mu\int}
 
@@ -41,12 +43,12 @@
 \pgfplotsset{compat=1.18}
 
 \usepackage{geometry}
- \geometry{
- a4paper,
- total={170mm,245mm},
- left=20mm,
- top=20mm,
- }
+\geometry{
+  a4paper,
+  total={170mm,245mm},
+  left=20mm,
+  top=20mm,
+}
 
 \input{Configs/Boxes}
 \input{Configs/Formats}

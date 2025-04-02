@@ -68,20 +68,20 @@ $\upint_a^b f(x) \, \mathrm{d}x = inf \{ s(f, P) : P \text{ partición de } [a, 
 Dado $X$ un conjunto arbitrario no vacío. Sea $\mathcal{P}(X)$ el conjunto de partes de $X$.
 
 \begin{definition}[$\sigma$-álgebra]
-    Una familia $\mathfrak{X}$ es una $\sigma$-álgebra si verifica:
+    Una familia $\mf{X}$ es una $\sigma$-álgebra si verifica:
     \begin{enumerate}
-        \item $\O, X \in \mathfrak{X}$.
-        \item Si $A \in X \to A^c \in \mathfrak{X}$.
-        \item Sea $(A_n)_{n \geq 1}$ es una sucesión en $\mathfrak{X} \Rightarrow \bigcup_{n=1}^{\infty} A_n \in \mathfrak{X}$.
+        \item $\O, X \in \mf{X}$.
+        \item Si $A \in X \to A^c \in \mf{X}$.
+        \item Sea $(A_n)_{n \geq 1}$ es una sucesión en $\mf{X} \Rightarrow \bigcup_{n=1}^{\infty} A_n \in \mf{X}$.
     \end{enumerate}
 \end{definition}
 
-Si $\mathfrak{X}$ es una $\sigma$-álgebra de subconjuntos de $\mathfrak{X}$ el par $(X, \mathfrak{X})$ es un espacio medible. A cada $A \in \mathfrak{X}$
-lo llamaremos conjunto $\mathfrak{X}$-medible.
+Si $\mf{X}$ es una $\sigma$-álgebra de subconjuntos de $\mf{X}$ el par $(X, \mf{X})$ es un espacio medible. A cada $A \in \mf{X}$
+lo llamaremos conjunto $\mf{X}$-medible.
 
 \begin{note}
-    Si $\mathfrak{X}$ es una $\sigma$-álgebra de $X$ y $A_1, \cdots A_n \in \mathfrak{X}$ entonces $\bigcup_{k=1}^{n} A_k \in \mathfrak{X}$.
-    Idea de la demostración: Sea $(B_m)_{m \geq 1}$ la sucesión en $\mathfrak{X}$ definida por \begin{equation}
+    Si $\mf{X}$ es una $\sigma$-álgebra de $X$ y $A_1, \cdots A_n \in \mf{X}$ entonces $\bigcup_{k=1}^{n} A_k \in \mf{X}$.
+    Idea de la demostración: Sea $(B_m)_{m \geq 1}$ la sucesión en $\mf{X}$ definida por \begin{equation}
         B_m = \begin{cases}
             A_m & 1 \leq m \leq n \\
             \O  & m > n
@@ -90,29 +90,29 @@ lo llamaremos conjunto $\mathfrak{X}$-medible.
 \end{note}
 
 \begin{note}
-    Si $(A_n)_{n \geq 1}$ es una sucesión de una $\sigma$-álgebra $\mathfrak{X}$ entonces $\bigcap_{n=1}^{\infty} A_n \in \mathfrak{X}$.
+    Si $(A_n)_{n \geq 1}$ es una sucesión de una $\sigma$-álgebra $\mf{X}$ entonces $\bigcap_{n=1}^{\infty} A_n \in \mf{X}$.
     \begin{proof}
-        $\bigcup_{n \geq 1} A_n^c \in \mathfrak{X} \to (\bigcap_{n \geq 1} A_n^c)^c \in \mathfrak{X} \to \bigcup_{n \geq 1} A_n \in \mathfrak{X}$.
+        $\bigcup_{n \geq 1} A_n^c \in \mf{X} \to (\bigcap_{n \geq 1} A_n^c)^c \in \mf{X} \to \bigcup_{n \geq 1} A_n \in \mf{X}$.
     \end{proof}
 \end{note}
 
 \begin{eg}[$\sigma$-álgebras]
     Dado $X$ cualquiera no vacío.
     \begin{enumerate}
-        \item $\mathfrak{X} = \{ \O, X \}$ es una $\sigma$-álgebra.
-        \item $\mathfrak{X} = \mathcal{P}(X)$ es una $\sigma$-álgebra.
-        \item Sea $A \neq \O \subset X$. Luego $\mathfrak{X} = \{ \O, A, A^c, X \}$ es una $\sigma$-álgebra.
+        \item $\mf{X} = \{ \O, X \}$ es una $\sigma$-álgebra.
+        \item $\mf{X} = \mathcal{P}(X)$ es una $\sigma$-álgebra.
+        \item Sea $A \neq \O \subset X$. Luego $\mf{X} = \{ \O, A, A^c, X \}$ es una $\sigma$-álgebra.
         \item Supongamos que $X$ no es numerable y sea
               \begin{equation}
-                  \mathfrak{X} = \{ A \subseteq X : A \text{ es numerable ó } A^c \text{ es numerable} \}
+                  \mf{X} = \{ A \subseteq X : A \text{ es numerable ó } A^c \text{ es numerable} \}
               \end{equation}
-              es una $\sigma$-álgebra. Demostración ejercicio y además $\mathfrak{X} \neq \mathcal{P}(X)$.
+              es una $\sigma$-álgebra. Demostración ejercicio y además $\mf{X} \neq \mathcal{P}(X)$.
     \end{enumerate}
 \end{eg}
 
 \begin{lemma}
-    Dado un conjunto $X$, sean $\mathfrak{X}_1, \mathfrak{X}_2$ dos $\sigma$-álgebras de $X$. Entonces $\mathfrak{X}_1 \cap \mathfrak{X}_2$ es una $\sigma$-álgebra de $X$.
-    Más aún si $(\mathfrak{X}_i)_{i \in I}$ es una familia de $\sigma$-álgebras de $X$ entonces $\bigcap_{i \in I} \mathfrak{X}_i$ es una $\sigma$-álgebra de $X$.
+    Dado un conjunto $X$, sean $\mf{X}_1, \mf{X}_2$ dos $\sigma$-álgebras de $X$. Entonces $\mf{X}_1 \cap \mf{X}_2$ es una $\sigma$-álgebra de $X$.
+    Más aún si $(\mf{X}_i)_{i \in I}$ es una familia de $\sigma$-álgebras de $X$ entonces $\bigcap_{i \in I} \mf{X}_i$ es una $\sigma$-álgebra de $X$.
     Demostración, ejercicio.
 \end{lemma}
 
@@ -121,22 +121,22 @@ lo llamaremos conjunto $\mathfrak{X}$-medible.
 \begin{prop}
     Dado un conjunto $X$, sea $A \neq \O \subseteq \mathcal{P}(X) \to \exists \sigma$-álgebra $\sigma(A)$ que verifica: \begin{enumerate}
         \item $A \subseteq \sigma(A)$.
-        \item $\mathfrak{X}$ es $\sigma$-álgebra de $X$ tal que $A \subseteq X \to \sigma(A) \subseteq \mathfrak{X}$.
+        \item $\mf{X}$ es $\sigma$-álgebra de $X$ tal que $A \subseteq X \to \sigma(A) \subseteq \mf{X}$.
         \item $\sigma(A)$ es la única que verifica ambas propiedades en simultáneo.
     \end{enumerate}
     La llamaremos $\sigma$-álgebra generada por $A$.
 
     \begin{proof}
         Sea $\Delta = \{ \mathscr{C} \subseteq \mathcal{P}(X) : \mathscr{C} \text{ es } \sigma \text{-álgebra de } X \text{ y } A \subseteq \mathscr{C} \} \neq \O$ pues $\mathcal{P}(X) \in \Delta$.
-        Llamemos $\mathfrak{X} = \bigcap_{\mathscr{C} \in \Delta} \mathscr{C} = \{ B \in \mathcal{P}(X) : B \in \mathscr{C} (\forall \mathscr{C} \in \Delta) \}$.
-        Veamos que $\mathfrak{X}$ es una $\sigma$-álgebra de $X$.
+        Llamemos $\mf{X} = \bigcap_{\mathscr{C} \in \Delta} \mathscr{C} = \{ B \in \mathcal{P}(X) : B \in \mathscr{C} (\forall \mathscr{C} \in \Delta) \}$.
+        Veamos que $\mf{X}$ es una $\sigma$-álgebra de $X$.
         \begin{enumerate}
-            \item $\O, X \in \mathscr{C} (\forall \mathscr{C} \in \Delta) \to \O, X \in \mathfrak{X}$.
-            \item Sea $A \in \mathfrak{X} \to (\forall \mathscr{C} \in \Delta) A \in \mathscr{C} \to A^c \in \mathscr{C} (\forall \mathscr{C} \in \Delta) \to A^c \in \mathfrak{X}$.
-            \item Sea $(A_n)_{n \geq 1}$ una sucesión en $\mathfrak{X}$ el argumento es análogo a los dos anteriores.
+            \item $\O, X \in \mathscr{C} (\forall \mathscr{C} \in \Delta) \to \O, X \in \mf{X}$.
+            \item Sea $A \in \mf{X} \to (\forall \mathscr{C} \in \Delta) A \in \mathscr{C} \to A^c \in \mathscr{C} (\forall \mathscr{C} \in \Delta) \to A^c \in \mf{X}$.
+            \item Sea $(A_n)_{n \geq 1}$ una sucesión en $\mf{X}$ el argumento es análogo a los dos anteriores.
         \end{enumerate}
-        $\therefore$ $\mathfrak{X}$ es una $\sigma$-álgebra que verifica ambas condiciones.
-        Supongamos que existe otra $\overline{\mathfrak{X}}$ $\sigma$-álgebra que verifica las dos condiciones por la propiedad uno y dos podemos deducir que $\mathfrak{X} \subseteq \overline{\mathfrak{X}}$ y $\overline{\mathfrak{X}} \subseteq \mathfrak{X}$.
+        $\therefore$ $\mf{X}$ es una $\sigma$-álgebra que verifica ambas condiciones.
+        Supongamos que existe otra $\overline{\mf{X}}$ $\sigma$-álgebra que verifica las dos condiciones por la propiedad uno y dos podemos deducir que $\mf{X} \subseteq \overline{\mf{X}}$ y $\overline{\mf{X}} \subseteq \mf{X}$.
     \end{proof}
 \end{prop}
 
