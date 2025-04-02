@@ -160,14 +160,14 @@ Dado $X$ un conjunto arbitrario no vacío. Sea $\mc{P}(X)$ el conjunto de partes
 \end{prop}
 
 \begin{eg}
-    Consideremos $X = \R$ y sea $A = \{ (a, b) : a, b \in \R, a \leq b \}$. La $\sigma$-álgebra generada por $A$ es la $\sigma$-álgebra de Borel $\mc{B}$.
-    A los conjuntos de $\mc{B}$ los llamaremos conjuntos Borelianos. Veamos que si $\overline{A} = \{ (a, +\infty) : a \in \R \} \Rightarrow \sigma(\overline{A}) = \mc{B}$.
+    Consideremos $X = \R$ y sea $A = \{ (a$, $b) : a$, $b \in \R, a \leq b \}$. La $\sigma$-álgebra generada por $A$ es la $\sigma$-álgebra de Borel $\mc{B}$.
+    A los conjuntos de $\mc{B}$ los llamaremos conjuntos Borelianos. Veamos que si $\overline{A} = \{ (a\text{, } +\infty) : a \in \R \} \Rightarrow \sigma(\overline{A}) = \mc{B}$.
     \begin{proof}
         \begin{itemize}
-            \item Dado $a \in \R$, $(a, +\infty) = \bigcup_{n \geq 1} (a, a+n) \in \mc{B} \to \overline{A} \subseteq \mc{B}$.
+            \item Dado $a \in \R\text{, } (a, +\infty) = \bigcup_{n \geq 1} (a\text{, } a+n) \in \mc{B} \to \overline{A} \subseteq \mc{B}$.
                   Luego $\sigma(\overline{A}) \subseteq \mc{B}$. Por ser $\sigma(\overline{A})$ la mínima $\sigma$-álgebra que contiene a $\overline{A}$.
-            \item Dado $a, b \in \R$, $a < b$. Sabemos que $(a, b] = (a, +\infty) \cap (b, +\infty)^c \in \sigma(\overline{A})$.
-                  Luego $(a, b) = \bigcup_{n \geq 1} (a, b - \frac{1}{n}] \in \sigma(\overline{A})$. Por lo que $A \subset \sigma(\overline{A})$.
+            \item Dado $a\text{, } b \in \R \text{, } a < b$. Sabemos que $(a\text{, } b] = (a\text{, } +\infty) \cap (b\text{, } +\infty)^c \in \sigma(\overline{A})$.
+                  Luego $(a\text{, } b) = \bigcup_{n \geq 1} (a\text{, } b - \frac{1}{n}] \in \sigma(\overline{A})$. Por lo que $A \subset \sigma(\overline{A})$.
                   $\mc{B} = \sigma(A) \subset \sigma(\overline{A})$. Por ser $\sigma(A)$ la mínima $\sigma$-álgebra que contiene a $A$.
         \end{itemize}
     \end{proof}

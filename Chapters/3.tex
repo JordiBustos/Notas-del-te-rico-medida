@@ -30,12 +30,11 @@ Notación: Dada una función $f: X \to \R$ para cada $\alpha \in \R$ definimos: 
             \item $(1) \iff (3)$: $\{ f \leq \alpha \} = \{ f > \alpha \}^c \in \mf{X}$.
             \item $(2) \iff (4)$ Análogo.
             \item $(1) \iff (2)$: Supongamos que $f$ es $\mf{X}$-medible. Dado $\alpha \in \R$ quiero ver que $\{ f \geq \alpha \} \in \mf{X}$.
-                  \begin{equation*}
-                      x \in \{ f \geq \alpha \} \iff f(x) \geq \alpha > \alpha - \frac{1}{n} \quad (\forall n \in \N)
-                  \end{equation*}
-                  \begin{equation*}
-                      x \in \{ f > \alpha - \frac{1}{n} \} \quad (\forall n \in \N) \to \{ f \geq \alpha \} = \bigcap_{n \geq 1} \{ f > \alpha - \frac{1}{n} \} \in \mf{X}
-                  \end{equation*}
+                  \begin{align*}
+                      x & \in \{ f \geq \alpha \} \iff f(x) \geq \alpha > \alpha - \frac{1}{n} \quad (\forall n \in \N)  \\
+                      x & \in \{ f > \alpha - \frac{1}{n} \} \quad (\forall n \in \N)                                    \\
+                        & \Rightarrow \{ f \geq \alpha \} = \bigcap_{n \geq 1} \{ f > \alpha - \frac{1}{n} \} \in \mf{X}
+                  \end{align*}
                   Para la vuelta supongamos que vale $(2)$. Quiero ver que $\{ f > \gamma \} \in \mf{X}$. Notemos que
                   \begin{equation*}
                       \{ f > \gamma \} = \bigcup_{n \geq 1} \{ f \geq \gamma + \frac{1}{n} \}
