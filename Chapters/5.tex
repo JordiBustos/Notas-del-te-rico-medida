@@ -116,14 +116,14 @@ esté motivado por las nociones de longitud, área, volumen, probabilidad, masa,
 \end{eg}
 
 \begin{eg}[Medida de Lebesgue]
-    Si $X = \R$ y $\mf{X} = \mathcal{B}$, más adelante probaremos que $\exists !$ medida $\lambda : \mathcal{B} \to [0, +\infty]$ tal que:
+    Si $X = \R$ y $\mf{X} = \mc{B}$, más adelante probaremos que $\exists !$ medida $\lambda : \mc{B} \to [0, +\infty]$ tal que:
     $\lambda((a, b)) = b-a$ con $a, b \in \R$ y $a < b$. \\
     Es $\sigma$-finita pues $\R = \bigcup_{n \geq 1} (-n, n)$ y $\lambda((-n, n)) = 2n < +\infty$, pero no es finita pues $\lambda(\R) = +\infty$.
-    Notemos que $\lambda$ puede extenderse a una $\sigma$-álgebra de $\R$ más grande que $\mathcal{B}$, pero no puede extenderse a $P(\R)$.
+    Notemos que $\lambda$ puede extenderse a una $\sigma$-álgebra de $\R$ más grande que $\mc{B}$, pero no puede extenderse a $P(\R)$.
 \end{eg}
 
 \begin{eg}[Medida n-dimensional de Lebesgue]
-    Sea $X = \R^n$ y $ \mf{X} = \mathcal{B}_n$, tenemos que $\exists!$ medida $\lambda : \mathcal{B}_n \to [0, +\infty]$ tal que:
+    Sea $X = \R^n$ y $ \mf{X} = \mc{B}_n$, tenemos que $\exists!$ medida $\lambda : \mc{B}_n \to [0, +\infty]$ tal que:
     \begin{align*}
         \lambda_n(\prod_{i = 1}^n (a_i, b_i)) = \prod_{i = 1}^n (b_i - a_i) \quad \forall a_i, b_i \in \R \text{ y } a_i < b_i
     \end{align*}
@@ -132,7 +132,7 @@ esté motivado por las nociones de longitud, área, volumen, probabilidad, masa,
 \clearpage
 
 \begin{eg}[Medida de Borel - Stieltjes generada por f]
-    Si $X = \R$, $\mf{X} = \mathcal{B}$, fijemos $f: \R \to \R$ monótona no decreciente y continua. Probaremos que existe una única medida $\lambda_f : \mathcal{B} \to [0, +\infty]$ :
+    Si $X = \R$, $\mf{X} = \mc{B}$, fijemos $f: \R \to \R$ monótona no decreciente y continua. Probaremos que existe una única medida $\lambda_f : \mc{B} \to [0, +\infty]$ :
     \begin{align*}
         \lambda_f((a, b)) = f(b) - f(a) \quad \forall a, b \in \R \text{ y } a < b
     \end{align*}
@@ -214,7 +214,7 @@ esté motivado por las nociones de longitud, área, volumen, probabilidad, masa,
 \clearpage
 
 Notemos que en el segundo caso la condición $\mu(F_1) < +\infty$ se puede reemplazar por $\mu(F_{n_0}) < +\infty$ para algún $n_0 \geq 1$, pero no puede omitirse.
-Por ejemplo si $X = \R$ y $\mf{X} = \mathcal{B}$ y $\mu = \lambda$ la medida de Lebesgue, entonces llamemos $F_n = (n, +\infty)$ en este caso
+Por ejemplo si $X = \R$ y $\mf{X} = \mc{B}$ y $\mu = \lambda$ la medida de Lebesgue, entonces llamemos $F_n = (n, +\infty)$ en este caso
 $\mu(F_n) = +\infty$ y $\mu(\bigcap_{n \geq 1} F_n) = \O$.
 
 Aplicando estas propiedades para la medida de Lebesgue $\lambda$ podemos probar que si $I$ es un intervalo de $\R$ $(a, b) : a, b \in \overline{\R}$ y $a<b$ o $[a, b]$, $(a, b]$, $[a, b)$.

@@ -149,19 +149,19 @@ $\therefore \phi_n(x) \to f(x)$.
 \begin{eg}
     Si $(X, \mf{X})$ es un espacio medible:
     \begin{enumerate}
-        \item $f: X \to \R$ es $\mf{X}$-medible $\iff f$ es $(\mf{X}, \mathcal{B})$-medible.
-        \item $f: X \to \overline{\R}$ es $\mf{X}$-medible $\iff f$ es $(\mf{X}, \overline{\mathcal{B}})$-medible.
-        \item $f: X \to \R^n$, sean $f_j : X \to \R$ las componentes de $f$ entonces $f$ es $(\mf{X}, \mathcal{B})$-medible si y sólo si $f_j$ lo es $\forall j$.
+        \item $f: X \to \R$ es $\mf{X}$-medible $\iff f$ es $(\mf{X}, \mc{B})$-medible.
+        \item $f: X \to \overline{\R}$ es $\mf{X}$-medible $\iff f$ es $(\mf{X}, \overline{\mc{B}})$-medible.
+        \item $f: X \to \R^n$, sean $f_j : X \to \R$ las componentes de $f$ entonces $f$ es $(\mf{X}, \mc{B})$-medible si y sólo si $f_j$ lo es $\forall j$.
     \end{enumerate}
 \end{eg}
 
 \begin{prop}
     Dados un espacio medible $(X, \mf{X})$ y un conjunto $Y$, sea $f: X \to Y$ una función.
-    Si $\mathcal{A} \subseteq P(Y) : f^{-1}(A) \in \mf{X} \quad \forall A \in \mathcal{A}$ entonces $f$ es $(\mf{X}, \sigma(\mathcal{A}))$-medible.
+    Si $\mc{A} \subseteq P(Y) : f^{-1}(A) \in \mf{X} \quad \forall A \in \mc{A}$ entonces $f$ es $(\mf{X}, \sigma(\mc{A}))$-medible.
 
     \begin{proof}
-        Sea $Z = \{ E \subseteq Y : f^{-1}(E) \in \mf{X} \} \supseteq \mathcal{A}$. Es fácil ver que $Z$ es $\sigma$-álgebra entonces $\sigma(\mathcal{A}) \subseteq Z$.
-        Es decir que $f^{-1}(E) \in \mf{X} \quad \forall E \in \sigma(\mathcal{A})$. Luego $f$ es $(\mf{X}, \sigma(\mathcal{A}))$-medible.
+        Sea $Z = \{ E \subseteq Y : f^{-1}(E) \in \mf{X} \} \supseteq \mc{A}$. Es fácil ver que $Z$ es $\sigma$-álgebra entonces $\sigma(\mc{A}) \subseteq Z$.
+        Es decir que $f^{-1}(E) \in \mf{X} \quad \forall E \in \sigma(\mc{A})$. Luego $f$ es $(\mf{X}, \sigma(\mc{A}))$-medible.
     \end{proof}
 \end{prop}
 
