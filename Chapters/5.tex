@@ -1,17 +1,17 @@
 \section{Medidas}
 
 \subsection{Motivación}
-Sea $\phi: X \to [0, +\infty]$ con $Im(\phi) = \{ y_1, \cdots, y_m \}$. Si $\phi^{-1}(y_i) \in \mf{X}$ y conocemos
+Sea $\phi: X \to [0, +\infty]$ con $Im(\phi) = \{ y_1\text{, } \cdots \text{, } y_m \}$. Si $\phi^{-1}(y_i) \in \mf{X}$ y conocemos
 $\mu(\phi^{-1}(y_i)) \in [0, +\infty]$ (la medida de cada conjunto) podemos definir \begin{align*}
-    \int \phi \,d\mu = \sum_{i=1}^m y_i \cdot \mu(\phi^{-1}(y_i))
+    \int \phi \,\mathrm{d} \mu = \sum_{i=1}^m y_i \cdot \mu(\phi^{-1}(y_i))
 \end{align*}
 
 Si $f: X \to [0, +\infty]$ es $\mf{X}$-medible, $\exists$ una sucesión $(\phi_n)_{n \geq 1}$ con funciones así tal que $\phi_n \to f$. Entonces podremos definir
 \begin{align*}
-    \int f \,d\mu = \lim_{n \to \infty} \int \phi_n \,d\mu
+    \int f \,\mathrm{d}\mu = \lim_{n \to \infty} \int \phi_n \,\mathrm{d}\mu
 \end{align*}
 
-Dado un espacio medible $(X, \mf{X})$, vamos a considerar ciertas funciones $\mu : \mf{X} \to [0, +\infty] : $ el valor $\mu(E)$ para cada $E \in \mf{X}$
+Dado un espacio medible $(X\text{, } \mf{X})$, vamos a considerar ciertas funciones $\mu : \mf{X} \to [0, +\infty] : $ el valor $\mu(E)$ para cada $E \in \mf{X}$
 esté motivado por las nociones de longitud, área, volumen, probabilidad, masa, etc.
 
 \clearpage
@@ -45,7 +45,7 @@ esté motivado por las nociones de longitud, área, volumen, probabilidad, masa,
 \subsection{Definición de medida}
 
 \begin{definition}[Medida]
-    Dado un espacio medible $(X, \mf{X})$, una medida en $X$ es una función $\mu : \mf{X} \to [0, +\infty]$ tal que:
+    Dado un espacio medible $(X\text{, } \mf{X})$, una medida en $X$ es una función $\mu : \mf{X} \to [0, +\infty]$ tal que:
     \begin{enumerate}
         \item $\mu(\O) = 0$.
         \item ($\sigma$-aditividad) Si $(E_n)_{n \geq 1}$ es una sucesión en $\mf{X}$, dos a dos disjuntos $\Rightarrow$ \begin{align*}
@@ -58,7 +58,7 @@ esté motivado por las nociones de longitud, área, volumen, probabilidad, masa,
     Si $A_1, \cdots A_n \in \mf{X}$ son conjuntos dos a dos disjuntos entonces \begin{align*}
         \mu(\bigcup_{i = 1}^n A_i) = \sum_{i = 1}^n \mu(A_i)
     \end{align*}
-    Esto se deduce de la propiedad de $\sigma$-aditividad, pues construimos la sucesión $(E_n)_{n \geq 1}$ como $A_1, A_2, \cdots, A_n, \O, \O, \cdots$.
+    Esto se deduce de la propiedad de $\sigma$-aditividad, pues construimos la sucesión $(E_n)_{n \geq 1}$ como $A_1\text{, } A_2\text{, } \cdots\text{, } A_n\text{, } \O\text{, } \O\text{, } \cdots$.
 \end{note}
 
 \begin{definition}[Medida finita]
@@ -80,7 +80,7 @@ esté motivado por las nociones de longitud, área, volumen, probabilidad, masa,
 \end{eg}
 
 \begin{eg}
-    Sea $(X, \mf{X})$ un espacio medible y fijemos $x_0 \in X \neq \O$.
+    Sea $(X\text{, } \mf{X})$ un espacio medible y fijemos $x_0 \in X \neq \O$.
     Sea $\mu : \mf{X} \to [0, +\infty]$ tal que \begin{align*}
         \mu(E) = \begin{cases}
                      0 & \text{si } x_0 \notin E \\
@@ -104,7 +104,7 @@ esté motivado por las nociones de longitud, área, volumen, probabilidad, masa,
 \end{eg}
 
 \begin{eg}
-    Sea $(X, \mf{X})$ un espacio medible, $X$ con infinitos elementos, sea $(x_n)_{n \geq 1}$ una sucesión en $X$ con $x_n \neq x_m \quad \forall n \neq m$ y
+    Sea $(X\text{, } \mf{X})$ un espacio medible, $X$ con infinitos elementos, sea $(x_n)_{n \geq 1}$ una sucesión en $X$ con $x_n \neq x_m \quad \forall n \neq m$ y
     $(a_n)_{n \geq 1}$ otra sucesión en $[0, +\infty]$. Definimos $\mu : \mf{X} \to [0, +\infty]$ como \begin{align*}
         \mu(E) & = \sum_{n \in \N \text{ } : \text{ } x_n \in E} a_n \\
                & E \in \mf{X}
@@ -140,7 +140,7 @@ esté motivado por las nociones de longitud, área, volumen, probabilidad, masa,
 \end{eg}
 
 \begin{lemma}
-    Dado un espacio medible $(X, \mf{X})$ y una medida $\mu : X \to [0, +\infty]$. Si $F$, $E \in \mf{X}$ y $E \subseteq F \Rightarrow \mu(E) \leq \mu(F)$.
+    Dado un espacio medible $(X\text{, } \mf{X})$ y una medida $\mu : X \to [0, +\infty]$. Si $F$, $E \in \mf{X}$ y $E \subseteq F \Rightarrow \mu(E) \leq \mu(F)$.
     Si además $\mu(E) < +\infty \Rightarrow \mu(F - E) = \mu(F) - \mu(E)$.
     \begin{proof}
         Como $E \subseteq F$ entonces $F = E \cup (F - E)$, además $F - E = F \cap E^c \in \mf{X}$ y $E \cap (F - E) = \O$.

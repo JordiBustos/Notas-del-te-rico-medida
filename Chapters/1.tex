@@ -15,7 +15,7 @@ $(P, \xi)$; y le podemos asignar su suma de Riemann \begin{align*}S(P, \xi) = \s
 
 Ejercicio: Probar que si $f$ es integrable Riemann entonces es acotada.
 
-Si $f$ es acotada, dada una partición $P$ del dominio de $f$, para cada $i \in 1, \cdots, n$ definimos:
+Si $f$ es acotada, dada una partición $P$ del dominio de $f$, para cada $i \in 1 \text{, } \cdots \text{, } n$ definimos:
 \begin{align*}
     M_i = sup \{ f(x) : x \in J_i \} \text{ y } m_i = inf\{ f(x) : x \in J_i \}
 \end{align*}
@@ -53,25 +53,30 @@ Entonces podemos definir suma superior e inferior de Riemann como
 \end{itemize}
 
 \begin{eg}
-    Sea $f: [0, 1] \to \R : f(x) = \begin{cases}
+    Sea $f: [0 \text{, } 1] \to \R : f(x) = \begin{cases}
             1 & x \in \Q              \\
             0 & x \in \R \setminus \Q
         \end{cases} f$ no es integrable Riemann.
     \begin{proof}
-        Llamemos $A = [0, 1] \cap \Q$. $A$ es numerable entonces $\exists \sigma: \N \to A$ biyección. Para cada $n \in \N$, sea
-        $A_n = \{ \sigma(1), \cdots, \sigma(n) \}$, $A_n \subset A_{n+1}$ y $\bigcup_{n=1}^{\infty} A_n = A$.
+        Llamemos $A = [0 \text{, } 1] \cap \Q$. $A$ es numerable entonces $\exists \sigma: \N \to A$ biyectiva. Para cada $n \in \N$, sea
+        $A_n = \{ \sigma(1)\text{, } \cdots \text{, } \sigma(n) \}$, $A_n \subset A_{n+1}$ y $\bigcup_{n=1}^{\infty} A_n = A$.
         Ahora para cada $n \geq 1$ consideramos:
         $f_n: [0, 1] \to \R$ dada por
         \begin{align*}
             f_n(x) = \begin{cases}
-                         1 & x \in A_n                  \\
-                         0 & x \in [0, 1] \setminus A_n
+                         1 & x \in A_n                          \\
+                         0 & x \in [0\text{, } 1] \setminus A_n
                      \end{cases}
         \end{align*}
         $f_n$ es integrable Riemann (queda como ejercicio demostrarlo) ya que es continua salvo en los puntos de $A_n$ y
         los límites laterales son siempre cero.
         Veamos ahora que $f_n \to f$. Sea $x \in [0, 1]$ \begin{enumerate}
-            \item Si $x \in A \Rightarrow x \in A_{n_0}, n_0 \in \N \Rightarrow (\forall n > n_0) x \in A_n \Rightarrow (\forall n > n_0) f_n(x) = 1 \Rightarrow f_n(x) \to f(x) = 1$.
+            \item Si $x \in A$ \begin{align*}
+                       & \Rightarrow x \in A_{n_0}, n_0 \in \N         \\
+                       & \Rightarrow (\forall n > n_0) \quad x \in A_n \\
+                       & \Rightarrow (\forall n > n_0) \quad f_n(x) = 1      \\
+                       & \Rightarrow f_n(x) \to f(x) = 1
+                  \end{align*}
             \item Si $x \notin A \Rightarrow (\forall n \in \N) \quad x \notin A_n \Rightarrow (\forall n \in \N) \quad f_n(x) = 0 \Rightarrow f_n(x) \to f(x) = 0$.
         \end{enumerate} $\therefore f_n \to f$.
         Si conocieramos $\ell(A)$ y $\ell([0, 1] \setminus A)$ podríamos definir $\int f = 1 \times \ell(A) + 0 \times \ell([0, 1] \setminus A)$.
@@ -86,7 +91,7 @@ Dado $X$ un conjunto arbitrario no vacío. Sea $\mc{P}(X)$ el conjunto de partes
     Una familia $\mf{X}$ es una $\sigma$-álgebra si verifica:
     \begin{enumerate}
         \item $\O, X \in \mf{X}$.
-        \item Si $A \in X \to A^c \in \mf{X}$.
+        \item Si $A \in X \Rightarrow A^c \in \mf{X}$.
         \item Sea $(A_n)_{n \geq 1}$ una sucesión en $\mf{X} \Rightarrow \bigcup_{n=1}^{\infty} A_n \in \mf{X}$.
     \end{enumerate}
 \end{definition}
@@ -97,7 +102,7 @@ Dado $X$ un conjunto arbitrario no vacío. Sea $\mc{P}(X)$ el conjunto de partes
 \end{definition}
 
 \begin{note}
-    Si $\mf{X}$ es una $\sigma$-álgebra de $X$ y $A_1, \cdots A_n \in \mf{X}$ entonces $\bigcup_{k=1}^{n} A_k \in \mf{X}$.
+    Si $\mf{X}$ es una $\sigma$-álgebra de $X$ y $A_1 \text{, } \cdots \text{, } A_n \in \mf{X}$ entonces $\bigcup_{k=1}^{n} A_k \in \mf{X}$.
     Idea de la demostración: Sea $(B_m)_{m \geq 1}$ la sucesión en $\mf{X}$ definida por \begin{equation*}
         B_m = \begin{cases}
             A_m & 1 \leq m \leq n \\
@@ -109,7 +114,7 @@ Dado $X$ un conjunto arbitrario no vacío. Sea $\mc{P}(X)$ el conjunto de partes
 \begin{note}
     Si $(A_n)_{n \geq 1}$ es una sucesión de una $\sigma$-álgebra $\mf{X}$ entonces $\bigcap_{n=1}^{\infty} A_n \in \mf{X}$.
     \begin{proof}
-        $\bigcup_{n \geq 1} A_n^c \in \mf{X} \Rightarrow (\bigcap_{n \geq 1} A_n^c)^c \in \mf{X} \to \bigcup_{n \geq 1} A_n \in \mf{X}$.
+        $\bigcup_{n \geq 1} A_n^c \in \mf{X} \Rightarrow (\bigcap_{n \geq 1} A_n^c)^c \in \mf{X} \Rightarrow \bigcup_{n \geq 1} A_n \in \mf{X}$.
     \end{proof}
 \end{note}
 
@@ -137,21 +142,20 @@ Dado $X$ un conjunto arbitrario no vacío. Sea $\mc{P}(X)$ el conjunto de partes
     \end{proof}
 \end{lemma}
 
-\begin{prop}
+\begin{prop}[$\sigma$-álgebra generada por $A$]
     Dado un conjunto $X$, sea $A \neq \O \subseteq \mc{P}(X) \Rightarrow \exists$ $\sigma$-álgebra $\sigma(A)$ que verifica: \begin{enumerate}
         \item $A \subseteq \sigma(A)$.
         \item $\mf{X}$ es $\sigma$-álgebra de $X$ tal que $A \subseteq X \Rightarrow \sigma(A) \subseteq \mf{X}$.
         \item $\sigma(A)$ es la única que verifica ambas propiedades en simultáneo.
     \end{enumerate}
-    La llamaremos $\sigma$-álgebra generada por $A$.
 
     \begin{proof}
         Sea $\Delta = \{ \mathscr{C} \subseteq \mc{P}(X) : \mathscr{C} \text{ es } \sigma \text{-álgebra de } X \text{ y } A \subseteq \mathscr{C} \} \neq \O$ pues $\mc{P}(X) \in \Delta$.
         Llamemos $\mf{X} = \bigcap_{\mathscr{C} \in \Delta} \mathscr{C} = \{ B \in \mc{P}(X) : B \in \mathscr{C} (\forall \mathscr{C} \in \Delta) \}$.
         Veamos que $\mf{X}$ es una $\sigma$-álgebra de $X$.
         \begin{enumerate}
-            \item $\O\text{, } X \in \mathscr{C} (\forall \mathscr{C} \in \Delta) \to \O\text{, } X \in \mf{X}$.
-            \item Sea $A \in \mf{X} \to (\forall \mathscr{C} \in \Delta) A \in \mathscr{C} \to A^c \in \mathscr{C} (\forall \mathscr{C} \in \Delta) \to A^c \in \mf{X}$.
+            \item $\O\text{, } X \in \mathscr{C} (\forall \mathscr{C} \in \Delta) \Rightarrow \O\text{, } X \in \mf{X}$.
+            \item Sea $A \in \mf{X} \Rightarrow (\forall \mathscr{C} \in \Delta) A \in \mathscr{C} \Rightarrow A^c \in \mathscr{C} (\forall \mathscr{C} \in \Delta) \Rightarrow A^c \in \mf{X}$.
             \item Sea $(A_n)_{n \geq 1}$ una sucesión en $\mf{X}$ el argumento es análogo a los dos anteriores.
         \end{enumerate}
         $\therefore$ $\mf{X}$ es una $\sigma$-álgebra que verifica ambas condiciones.
@@ -164,7 +168,7 @@ Dado $X$ un conjunto arbitrario no vacío. Sea $\mc{P}(X)$ el conjunto de partes
     A los conjuntos de $\mc{B}$ los llamaremos conjuntos Borelianos. Veamos que si $\overline{A} = \{ (a\text{, } +\infty) : a \in \R \} \Rightarrow \sigma(\overline{A}) = \mc{B}$.
     \begin{proof}
         \begin{itemize}
-            \item Dado $a \in \R\text{, } (a, +\infty) = \bigcup_{n \geq 1} (a\text{, } a+n) \in \mc{B} \to \overline{A} \subseteq \mc{B}$.
+            \item Dado $a \in \R\text{, } (a, +\infty) = \bigcup_{n \geq 1} (a\text{, } a+n) \in \mc{B} \Rightarrow \overline{A} \subseteq \mc{B}$.
                   Luego $\sigma(\overline{A}) \subseteq \mc{B}$. Por ser $\sigma(\overline{A})$ la mínima $\sigma$-álgebra que contiene a $\overline{A}$.
             \item Dado $a\text{, } b \in \R \text{, } a < b$. Sabemos que $(a\text{, } b] = (a\text{, } +\infty) \cap (b\text{, } +\infty)^c \in \sigma(\overline{A})$.
                   Luego $(a\text{, } b) = \bigcup_{n \geq 1} (a\text{, } b - \frac{1}{n}] \in \sigma(\overline{A})$. Por lo que $A \subset \sigma(\overline{A})$.
@@ -173,7 +177,10 @@ Dado $X$ un conjunto arbitrario no vacío. Sea $\mc{P}(X)$ el conjunto de partes
     \end{proof}
 \end{eg}
 
+\clearpage
+
 Ejercicio demostrar que la $\sigma$-álgebra de Borel está generada también por las siguientes familias:
+
 \begin{enumerate}
     \item $\{ (a, b] : a, b \in \R, a < b \}$.
     \item $\{ [a, b) : a, b \in \R, a < b \}$.

@@ -3,7 +3,7 @@
 \begin{prop}
     Sea $f: \R^n \to \R$, $f$ es continua si $f^{-1}(V)$ es abierto de $ \R^n$ $(\forall V$ abierto en $\tau_1)$.
 \end{prop}
-En lo que sigue vamos a considerar un espacio medible fijo de la forma $(X, \mf{X})$.
+En lo que sigue vamos a considerar un espacio medible fijo de la forma $(X \text{, } \mf{X})$.
 
 Notación: Dada una función $f: X \to \R$ para cada $\alpha \in \R$ definimos: \begin{equation*}
     \{ f > \alpha \} := \{ x \in X : f(x) > \alpha \} = f^{-1}((\alpha, +\infty))
@@ -25,7 +25,7 @@ Notación: Dada una función $f: X \to \R$ para cada $\alpha \in \R$ definimos: 
     \end{enumerate}
 
     \begin{proof}
-        Sea $\alpha, \gamma \in \R$.
+        Sea $\alpha \text{, } \gamma \in \R$.
         \begin{itemize}
             \item $(1) \iff (3)$: $\{ f \leq \alpha \} = \{ f > \alpha \}^c \in \mf{X}$.
             \item $(2) \iff (4)$ Análogo.
@@ -80,7 +80,7 @@ Notación: Dada una función $f: X \to \R$ para cada $\alpha \in \R$ definimos: 
 \end{eg}
 
 \begin{eg}
-    Si $X = \R^n$, $\mf{X} = \mc{B} \to$ toda función continua es medible con respecto a la $\sigma$-álgebra de Borel.
+    Si $X = \R^n$, $\mf{X} = \mc{B} \Rightarrow$ toda función continua es medible con respecto a la $\sigma$-álgebra de Borel.
 \end{eg}
 
 \begin{eg}
@@ -98,9 +98,9 @@ Ejercicio: $f: X \to \R$ es $\mf{X}$-medible $\iff f^{-1}(B) \in \mf{X} \quad (\
         Veamos que $f²$ es $\mf{X}$-medible. Dado $\alpha \in \R$ quiero ver que \begin{equation*}
             \{ f² > \alpha \} \in \mf{X}
         \end{equation*}
-        Si $\alpha < 0 \to \{ f² > \alpha \} = X$.
+        Si $\alpha < 0 \Rightarrow \{ f² > \alpha \} = X$.
 
-        Si $\alpha \geq 0 \to$
+        Si $\alpha \geq 0 \Rightarrow$
         \begin{equation*}
             \{ f^2 > \alpha \} = \{ x \in X : f(x) \cdot f(x) > \sqrt{\alpha} \cdot \sqrt{\alpha} \}
         \end{equation*}
@@ -121,7 +121,7 @@ Ejercicio: $f: X \to \R$ es $\mf{X}$-medible $\iff f^{-1}(B) \in \mf{X} \quad (\
         \end{equation*}
         Sabemos que:
         \begin{equation*}
-            (f+g)² \text{ es } \mf{X} \text{-medible} \to f² + 2 \cdot f \cdot g + g² \text{ es } \mf{X} \text{-medible}
+            (f+g)² \text{ es } \mf{X} \text{-medible} \Rightarrow f² + 2 \cdot f \cdot g + g² \text{ es } \mf{X} \text{-medible}
         \end{equation*}
         \begin{equation*}
             f \cdot g = \frac{1}{2} \left( (f+g)² - f² - g² \right) \text{ es } \mf{X} \text{-medible}
@@ -138,14 +138,14 @@ Ejercicio: $f: X \to \R$ es $\mf{X}$-medible $\iff f^{-1}(B) \in \mf{X} \quad (\
     \end{equation*}
 \end{definition}
 
-A la clase de las funciones (a valores en la recta extendida) $\mf{X}$-medibles la denotaremos por $M(X, \mf{X})$.
+A la clase de las funciones (a valores en la recta extendida) $\mf{X}$-medibles la denotaremos por $M(X \text{, } \mf{X})$.
 
 \begin{note}
-    Si $f: X \to \R \to f \in M(X, \mf{X})$.
+    Si $f: X \to \R \Rightarrow f \in M(X \text{, } \mf{X})$.
 \end{note}
 
 \begin{note}
-    Si \begin{equation*}f \in M(X, \mf{X}) \to \{ f = +\infty \} = f^{-1}(\{ +\infty \}) = \bigcap_{n \geq 1} \{ f > n \} \in \mf{X}\end{equation*}
+    Si \begin{equation*}f \in M(X\text{, } \mf{X}) \Rightarrow \{ f = +\infty \} = f^{-1}(\{ +\infty \}) = \bigcap_{n \geq 1} \{ f > n \} \in \mf{X}\end{equation*}
     Además, \begin{equation*}\{ f = -\infty \} = f^{-1}(\{ -\infty \}) = \bigcap_{n \geq 1} \{ f < -n \} \in \mf{X}\end{equation*}
 \end{note}
 
@@ -157,9 +157,9 @@ A la clase de las funciones (a valores en la recta extendida) $\mf{X}$-medibles 
             0 & x \in B_f
         \end{cases}
     \end{equation*}
-    $\to f \in M(X, \mf{X}) \iff A_f, B_f \in \mf{X}$ y $\hat{f}$ es $\mf{X}$-medible.
+    $\Rightarrow f \in M(X\text{, } \mf{X}) \iff A_f, B_f \in \mf{X}$ y $\hat{f}$ es $\mf{X}$-medible.
     \begin{proof}
-        Supongamos primero que $f \in M(X, \mf{X})$. Dado $\alpha \in \R$, ya vimos que $A_f, B_f \in \mf{X}$. Veamos que $\hat{f}$ es $\mf{X}$-medible.
+        Supongamos primero que $f \in M(X\text{, } \mf{X})$. Dado $\alpha \in \R$, ya vimos que $A_f, B_f \in \mf{X}$. Veamos que $\hat{f}$ es $\mf{X}$-medible.
 
         Quiero ver que $\{ \hat{f} > \alpha \} \in \mf{X}$. Si $\alpha \geq 0$ entonces
         \begin{equation*}
@@ -178,13 +178,13 @@ A la clase de las funciones (a valores en la recta extendida) $\mf{X}$-medibles 
 \end{lemma}
 
 \begin{corollary}
-    Si $f, g \in M(X, \mf{X})$ y $c \in \R$. Las funciones $c \cdot f$, $f²$, $|f|$, $f \cdot g \in M(X, \mf{X})$.
+    Si $f$, $g \in M(X \text{, } \mf{X})$ y $c \in \R$. Las funciones $c \cdot f$, $f²$, $|f|$, $f \cdot g \in M(X \text{, } \mf{X})$.
 \end{corollary}
 
 \clearpage
 
 \begin{note}
-    Dados $f, g \in M(X, \mf{X})$ consideremos los conjuntos \begin{itemize}
+    Dados $f\text{, } g \in M(X\text{, } \mf{X})$ consideremos los conjuntos \begin{itemize}
         \item $E_1 = \{ f = + \infty \} \cap \{ g = - \infty \} \in \mf{X}$.
         \item $E_2 = \{ f = - \infty \} \cap \{ g = + \infty \} \in \mf{X}$.
     \end{itemize}
@@ -195,18 +195,18 @@ A la clase de las funciones (a valores en la recta extendida) $\mf{X}$-medibles 
             0   & x \in E_1 \cup E_2
         \end{cases}
     \end{equation*}
-    La demostración de que $f+g \in M(X, \mf{X})$ se deja como ejercicio.
+    La demostración de que $f+g \in M(X\text{, } \mf{X})$ se deja como ejercicio.
 \end{note}
 
 \begin{lemma}
-    Dada una sucesión de funciones $(f_n)_{n \geq 1}$ en $M(X, \mf{X})$ sean $f, f^*, F, F^*$ definidas por:
+    Dada una sucesión de funciones $(f_n)_{n \geq 1}$ en $M(X\text{, } \mf{X})$ sean $f, f^*, F, F^*$ definidas por:
     \begin{equation*}
         f(x) = inf_{n \geq 1} f_n(x) \quad f^*(x) = \liminf_{n \to \infty} f_n(x)
     \end{equation*}
     \begin{equation*}
         F(x) = sup_{n \geq 1} f_n(x) \quad F^*(x) = \limsup_{n \to \infty} f_n(x)
     \end{equation*}
-    Entonces $f, f^*, F, F^* \in M(X, \mf{X})$.
+    Entonces $f, f^*, F, F^* \in M(X\text{, } \mf{X})$.
     \begin{proof}
         Dado $\alpha \in \R$ tenemos que \begin{equation*}
             \{ F > \alpha \} = \bigcup_{n \geq 1} \{ f_n > \alpha \} \in \mf{X}
@@ -214,7 +214,7 @@ A la clase de las funciones (a valores en la recta extendida) $\mf{X}$-medibles 
         \begin{equation*}
             \{ f > \alpha \} = \bigcap_{n \geq 1} \{ f_n > \alpha \} \in \mf{X}
         \end{equation*}
-        Veamos $F^* \in M(X, \mf{X})$. Para cada $n \in \N$ defino $h_n = sup_{m \geq n} f_m \in \mf{X}$. Por ser subsucesión de funciones medibles.
+        Veamos $F^* \in M(X\text{, } \mf{X})$. Para cada $n \in \N$ defino $h_n = sup_{m \geq n} f_m \in \mf{X}$. Por ser subsucesión de funciones medibles.
         Luego \begin{equation*}
             F^* = inf_{n \geq 1} (sup_{m \geq n} f_m) \in \mf{X}
         \end{equation*}
@@ -223,7 +223,7 @@ A la clase de las funciones (a valores en la recta extendida) $\mf{X}$-medibles 
 \end{lemma}
 
 \begin{corollary}
-    Dada $(f_n)_{n \geq 1} : f_n \in M(X, \mf{X}) \quad (\forall n \in \N)$. Supongamos que la sucesión converge puntualmente a $f$ entonces $f \in M(X, \mf{X})$.
+    Dada $(f_n)_{n \geq 1} : f_n \in M(X\text{, } \mf{X}) \quad (\forall n \in \N)$. Supongamos que la sucesión converge puntualmente a $f$ entonces $f \in M(X\text{, } \mf{X})$.
     \begin{proof}
         Notemos que $f = \liminf f_n = \limsup f_n$ y aplicamos el lema anterior.
     \end{proof}

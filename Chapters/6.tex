@@ -1,7 +1,7 @@
 \section{Espacio de medida}
 
 \begin{definition}[Espacio de medida]
-    Un espacio de medida es una terna ($X, \mf{X}, \mu$), donde $X$ es un conjunto, $\mf{X}$ es una $\sigma$-álgebra de subconjuntos de $X$ y $\mu$ es una medida en $\mf{X}$.
+    Un espacio de medida es una terna ($X\text{, } \mf{X}\text{, } \mu$), donde $X$ es un conjunto, $\mf{X}$ es una $\sigma$-álgebra de subconjuntos de $X$ y $\mu$ es una medida en $\mf{X}$.
 \end{definition}
 
 Un espacio de probabilidad es un espacio de medida tal que $\mu(X) = 1$.
@@ -9,13 +9,13 @@ En este caso a $X$ se lo llama espacio muestral, a $\mf{X}$ se lo llama colecci�
 una función $f: X \to \R$, $\mf{X}$-medible se la llama variable aleatoria.
 
 \begin{definition}
-    Dado un espacio de medida ($X, \mf{X}, \mu$), sea $P(x)$ una "propiedad" que se puede predicar de sobre los elementos $X \in \mf{X}$.
+    Dado un espacio de medida ($X\text{, } \mf{X}\text{, } \mu$), sea $P(x)$ una "propiedad" que se puede predicar de sobre los elementos $X \in \mf{X}$.
     Diremos que $P(x)$ vale $\mu$-casi todo punto ($\mu$-c.t.p) si $\exists N \in \mf{X}$ con $\mu(N) = 0 : P(x)$ vale $\forall x \in N^c$.
 \end{definition}
 
 \begin{eg}
     $f, g : X \to \R$ dos funciones diremos que $f = g \quad \mu$-c.t.p si $\exists N \in \mf{X}$ con $\mu(N) = 0 : f(x) = g(x) \quad \forall x \in N^c$.
-    Por ejemplo si ($X, \mf{X}, \mu$) $=$ ($\R, \mc{B}, \lambda $), las funciones $f = X_{\Q}$, y $g = 0$ son $\lambda$-c.t.p iguales ya que
+    Por ejemplo si ($X\text{, } \mf{X}\text{, } \mu$) $=$ ($\R, \mc{B}, \lambda $), las funciones $f = X_{\Q}$, y $g = 0$ son $\lambda$-c.t.p iguales ya que
     $f(x) = g(x) = 0 \quad \forall x \in \Q^c$ y $\lambda(\Q) = 0$.
 \end{eg}
 

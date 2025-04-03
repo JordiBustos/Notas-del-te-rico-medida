@@ -8,10 +8,10 @@ entre ellos es
     d(x, y) = \|x-y\| = \sqrt{ \sum_{i=1}^n (x_i - y_i)^2 }
 \end{equation*}
 
-Consideramos la topología usual de $\R^n$ notada $\tau^n$ al conjunto de todos los abiertos de $\R^n$
+Consideramos la topología usual de $\R^n$ notada $\tau^n$ al conjunto de todos los abiertos de $\R^n$.
 
 \begin{definition}
-    Dados $a = (a_1, \cdots, a_n)$, $b = (b_1, \cdots, b_n) \in \R^n$ con $a_i < b_i (\forall i = 1, \cdots, n)$
+    Dados $a = (a_1\text{, } \cdots\text{, } a_n)$, $b = (b_1\text{, } \cdots\text{, } b_n) \in \R^n$ con $a_i < b_i (\forall i = 1 \text{, } \cdots \text{, } n)$
     Definimos el intervalo abierto (a, b) como
     \begin{align*}
         (a, b) & = \prod_{i=1}^n (a_i\text{, } b_i)                                                                                                \\
@@ -40,7 +40,7 @@ Consideramos la topología usual de $\R^n$ notada $\tau^n$ al conjunto de todos 
 \begin{definition}[$\sigma$-álgebra de Borel de $\R^n$]
     Es la $\sigma$-álgebra generada por:
     \begin{equation*}
-        \mc{A} = \{ (a, b) : a\text{, } b \in \R^n : a_i < b_i \text{, } i = 1\text{, } \cdots \text{, } n \}
+        \mc{A} = \{ (a\text{, } b) : a\text{, } b \in \R^n : a_i < b_i \text{, } i = 1\text{, } \cdots \text{, } n \}
     \end{equation*}
     Lo notamos $\mc{B}^n$.
 \end{definition}
@@ -118,7 +118,7 @@ $\beta_n$ es numerable pues el conjunto de índices que enumera a $\beta_n$ es
 \section{Recta real extendida}
 
 \begin{definition}[Recta real extendida]
-    Definimos $\overline{\R} = \R \cup \{ -\infty, +\infty \}$. Con las siguientes convenciones:
+    Definimos $\overline{\R} = \R \cup \{ -\infty\text{, } +\infty \}$. Con las siguientes convenciones:
     \begin{enumerate}
         \item Dado $r \in \R$ tenemos que $-\infty < r < +\infty$.
         \item $\substack{+ \\ -} \infty + \substack{+ \\ -} \infty = \substack{+ \\ -} \infty$ y
@@ -136,7 +136,7 @@ $\beta_n$ es numerable pues el conjunto de índices que enumera a $\beta_n$ es
     Si $a_n = +\infty \cdot \frac{1}{n} (\forall n \in \N)$ entonces $lim_{n \to +\infty} a_n = +\infty$. Pero $+\infty \cdot lim_{n \to +\infty} \frac{1}{n} = +\infty \cdot 0 = 0$.
 \end{note}
 
-Notemos que si $A \subseteq \overline{\R} \to inf(A) \in \overline{\R}$ y $sup(A) \in \overline{\R}$.
+Notemos que si $A \subseteq \overline{\R} \Rightarrow inf(A) \in \overline{\R}$ y $sup(A) \in \overline{\R}$.
 
 Dada una sucesión $(x_n)_{n \in \N} \subseteq \R$, sea $\O \neq L = \{ x \in \overline{\R} : \exists x_{n_k} \to x \} \subseteq \overline{\R}$.
 
@@ -144,9 +144,9 @@ Dada una sucesión $(x_n)_{n \in \N} \subseteq \R$, sea $\O \neq L = \{ x \in \o
     $\limsup_{n \to \infty} x_n = sup(L)$ y $\liminf_{n \to \infty} x_n = inf(L)$.Ambos pertenecen a $L$.
 
     Además, si para cada $n \in \N$ definimos $\alpha_m = sup\{ x_n : n \geq m \}$ la sucesión $\alpha_m$ es decreciente y
-    $\limsup_{n \to \infty} x_n = inf\{\alpha_m\} = inf_{m \geq n} ( sup_{n \geq m}\{x_n\} )$.
+    $\limsup_{n \to \infty} x_n = inf\{\alpha_m\} = inf_{m \geq 1} ( sup_{n \geq m}\{x_n\} )$.
 
-    Análogamente $\liminf_{n \to \infty} x_n = sup\{\alpha_m\} = sup_{m \geq n} ( inf_{n \geq m}\{x_n\} )$.
+    Análogamente $\liminf_{n \to \infty} x_n = sup\{\alpha_m\} = sup_{m \geq 1} ( inf_{n \geq m}\{x_n\} )$.
 \end{definition}
 
 \begin{prop}
