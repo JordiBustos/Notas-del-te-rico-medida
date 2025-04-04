@@ -7,8 +7,7 @@
     headfont=\bfseries\sffamily\color{magenta!80!black}, bodyfont=\normalfont,
     mdframed={
             linecolor=white!60,
-            innertopmargin=10pt, innerbottommargin=10pt, innerrightmargin=12pt, innerleftmargin=12pt,
-            roundcorner=8pt,
+            innertopmargin=0pt, innerbottommargin=0pt, innerrightmargin=12pt, innerleftmargin=12pt,
         }
 ]{thmbox}
 
@@ -16,8 +15,7 @@
     headfont=\bfseries\sffamily\color{black}, bodyfont=\normalfont,
     mdframed={
             linecolor=white!60,
-            innertopmargin=10pt, innerbottommargin=10pt, innerrightmargin=12pt, innerleftmargin=12pt,
-            roundcorner=8pt,
+            innertopmargin=0pt, innerbottommargin=0pt, innerrightmargin=12pt, innerleftmargin=12pt,
             align=center,
         }
 ]{thmtikz}
@@ -27,8 +25,7 @@
     numbered=no,
     mdframed={
             linecolor=white!40,
-            innertopmargin=10pt, innerbottommargin=10pt, innerrightmargin=12pt, innerleftmargin=12pt,
-            roundcorner=8pt,
+            innertopmargin=10pt, innerbottommargin=0pt, innerrightmargin=12pt, innerleftmargin=12pt,
         },
     qed=\qedsymbol
 ]{thmproofbox}
@@ -43,7 +40,7 @@
 \declaretheorem[style=thmproofbox, name=Demostración]{replacementproof}
 \renewenvironment{proof}[1][\proofname]{\vspace{-10pt}\begin{replacementproof}}{\end{replacementproof}}
 
-\declaretheorem[style=thmbox, numbered=no, name=Nota]{note}
+\declaretheorem[style=thmbox, numbered=no, name=Observación]{note}
 \declaretheorem[style=thmbox, numbered=no, ]{temp}
 \declaretheorem[style=thmtikz, numbered=no, name=.]{tikznt}
 
