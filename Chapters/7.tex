@@ -51,10 +51,9 @@ Luego $(a^\prime$, $b] \subseteq \bigcup_{j = 1}^m I^\prime_j \Rightarrow b - a^
 Si $I^\prime_j \cap (a^\prime$, $b] = \O$ entonces lo podemos descartar para que $\bigcup_{j = 1}^m I^\prime_j$ sea conexa y, por lo tanto, pertenezca a $\mf{Y}$.
 
 Luego por ser condicionalmente subaditiva tenemos que \begin{align*}
-    b - a^\prime \leq \ell(\bigcup_{j = 1}^m I^\prime_j) & \leq \sum_{j = 1}^m \ell(I^\prime_j)                                               \\
-                                                         & = \sum_{j = 1}^m b_j + \e_j - a_j = \sum_{j = 1}^m b_j - a_j + \sum_{j = 1}^m \e_j \\
-                                                         & \leq \sum_{n \geq 1} \ell(I_n) + \e \cdot \sum_{j = 1}^m \dfrac{1}{2 \cdot j}      \\
-                                                         & \leq \sum_{n \geq 1} \ell(I_n) + \e
+    b - a^\prime \leq \ell(\bigcup_{j = 1}^m I^\prime_j) & \leq \sum_{j = 1}^m \ell(I^\prime_j)                                                                              \\
+                                                         & = \sum_{j = 1}^m b_j + \e_j - a_j = \sum_{j = 1}^m b_j - a_j + \sum_{j = 1}^m \e_j                                \\
+                                                         & \leq \sum_{n \geq 1} \ell(I_n) + \e \cdot \sum_{j = 1}^m \dfrac{1}{2 \cdot j} \leq \sum_{n \geq 1} \ell(I_n) + \e \\
 \end{align*}
 
 Como $\e > 0$ era arbitrario resulta que $b - a^\prime \leq \sum_{n \geq 1} \ell(I_n)$.
@@ -74,17 +73,17 @@ Fijemos $k \in \N : b > -k$. Luego $[-k, b] \subseteq \bigcup_{n \geq 1} I_n = I
 Como $[k, b]$ es compacto por Teorema de Heine-Borel tenemos que $\exists m \in \N : [-k$, $b] \subseteq \bigcup_{n = 1}^m (a_n$, $b_n + \frac{1}{2^n}) \in \mf{Y}$.
 
 Por el mismo argumento de antes (si hay más de una componente conexa se la descarta) \begin{align*}
-    b - (-k) & = \ell([-k \text{, } b])                                        \\
-             & \leq \ell(\bigcup_{n = 1}^m (a_n\text{, } b_n + \frac{1}{2^n})) \\
-             & \leq \sum_{n = 1}^m \ell((a_n\text{, } b_n + \frac{1}{2^n}))    \\
-             & = \sum_{n = 1}^m (b_n + \frac{1}{2^n} - a_n)                    \\
-             & = \sum_{n = 1}^m (b_n - a_n) + \sum_{n = 1}^m \frac{1}{2^n}     \\
+    b - (-k) & = \ell([-k \text{, } b])                                                                                                     \\
+             & \leq \ell(\bigcup_{n = 1}^m (a_n\text{, } b_n + \frac{1}{2^n})) \leq \sum_{n = 1}^m \ell((a_n\text{, } b_n + \frac{1}{2^n})) \\
+             & = \sum_{n = 1}^m (b_n + \frac{1}{2^n} - a_n) = \sum_{n = 1}^m (b_n - a_n) + \sum_{n = 1}^m \frac{1}{2^n}                     \\
              & \leq \sum_{n \geq 1} \ell(I_n) + 1
 \end{align*}
 
 Luego $\sum_{n \geq 1} \ell(I_n) \geq b + k - 1 \quad \forall k \in \N : b > -k \therefore$ tenemos que $\sum_{n \geq 1} \ell(I_n) = +\infty$.
 
 El tercer caso es cuando $(a$, $+\infty)$ con $a \in \R$ y el cuarto es cuando $I = \R$, ambos quedan como ejercicio.
+
+\clearpage
 
 \section{Extensión de $\ell$ al álgebra}
 
