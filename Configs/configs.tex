@@ -26,6 +26,15 @@
 \newcommand{\mf}[1]{\mathfrak{#1}}
 \newcommand{\mc}[1]{\mathcal{#1}}
 
+\newcommand\restr[2]{{% we make the whole thing an ordinary symbol
+\left.\kern-\nulldelimiterspace % automatically resize the bar with \right
+#1 % the function
+\littletaller % pretend it's a little taller at normal size
+\right|_{#2} % this is the delimiter
+}}
+
+\newcommand{\littletaller}{\mathchoice{\vphantom{\big|}}{}{}{}}
+
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
 % \norm{ \biggl(\sum_{n=1}^N \mathbf{P}_{n}\biggr) }
 

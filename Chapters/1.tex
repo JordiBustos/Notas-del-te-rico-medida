@@ -17,7 +17,7 @@ Ejercicio: Probar que si $f$ es integrable Riemann entonces es acotada. \\
 
 Si $f$ es acotada, dada una partición $P$ del dominio de $f$, para cada $i \in 1 \text{, } \cdots \text{, } n$ definimos:
 \begin{align*}
-    M_i = sup \{ f(x) : x \in J_i \} \text{ y } m_i = inf\{ f(x) : x \in J_i \}
+    M_i = \sup \left\{ f(x) : x \in J_i \right\} \text{ y } m_i = \inf\left\{ f(x) : x \in J_i \right\}
 \end{align*}
 
 Luego definimos la suma superior y la suma inferior asociada a $P$ como:
@@ -28,8 +28,8 @@ Luego definimos la suma superior y la suma inferior asociada a $P$ como:
 Entonces podemos definir suma superior e inferior de Riemann como
 
 \begin{align*}
-     & \lowint_a^b f(x) \, \mathrm{d}x = sup \{ S(f\text{, } P) : P \text{ partición de } [a\text{, } b] \} \text{ y } \\
-     & \upint_a^b f(x) \, \mathrm{d}x = inf \{ s(f\text{, } P) : P \text{ partición de } [a\text{, } b] \}
+     & \lowint_a^b f(x) \, \mathrm{d}x = \sup \left\{ S(f\text{, } P) : P \text{ partición de } [a\text{, } b] \right\} \text{ y } \\
+     & \upint_a^b f(x) \, \mathrm{d}x = \inf \left\{ s(f\text{, } P) : P \text{ partición de } [a\text{, } b] \right\}
 \end{align*}
 
 
@@ -59,7 +59,7 @@ Entonces podemos definir suma superior e inferior de Riemann como
         \end{cases} f$ no es integrable Riemann.
     \begin{proof}
         Llamemos $A = [0 \text{, } 1] \cap \Q$. $A$ es numerable entonces $\exists \sigma: \N \to A$ biyectiva. Para cada $n \in \N$, sea
-        $A_n = \{ \sigma(1)\text{, } \cdots \text{, } \sigma(n) \}$, $A_n \subset A_{n+1}$ y $\bigcup_{n=1}^{\infty} A_n = A$.
+        $A_n = \left\{ \sigma(1)\text{, } \cdots \text{, } \sigma(n) \right\}$, $A_n \subset A_{n+1}$ y $\bigcup_{n=1}^{\infty} A_n = A$.
         Ahora para cada $n \geq 1$ consideramos:
         $f_n: [0, 1] \to \R$ dada por
         \begin{align*}
@@ -72,7 +72,7 @@ Entonces podemos definir suma superior e inferior de Riemann como
         los límites laterales son siempre cero.
         Veamos ahora que $f_n \to f$. Sea $x \in [0, 1]$ \begin{enumerate}
             \item Si $x \in A$ \begin{align*}
-                       & \Rightarrow x \in A_{n_0} \quad n_0 \in \N          \\
+                       & \Rightarrow x \in A_{n_0} \quad n_0 \in \N     \\
                        & \Rightarrow (\forall n > n_0) \quad x \in A_n  \\
                        & \Rightarrow (\forall n > n_0) \quad f_n(x) = 1 \\
                        & \Rightarrow f_n(x) \to f(x) = 1

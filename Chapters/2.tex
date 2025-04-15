@@ -22,7 +22,7 @@ Consideramos la topología usual de $\R^n$ notada $\tau^n$ al conjunto de todos 
 \begin{definition}[$\e$-cubo]
     Dados $x= (x_1, \cdots, x_n)$ y $\e > 0$ el $\e$-cubo centrado en $x$ es el conjunto definido por
     \begin{equation*}
-        C(x, \e) = \prod_{i = 1}^n (x - \frac{\e}{2}, x + \frac{\e}{2})
+        C(x, \e) = \prod_{i = 1}^n \left(x - \frac{\e}{2}, x + \frac{\e}{2}\right)
     \end{equation*}
 \end{definition}
 
@@ -143,10 +143,10 @@ Dada una sucesión $(x_n)_{n \in \N} \subseteq \R$, sea $\O \neq L = \{ x \in \o
 \begin{definition}
     $\limsup_{n \to \infty} x_n = sup(L)$ y $\liminf_{n \to \infty} x_n = inf(L)$.Ambos pertenecen a $L$.
 
-    Además, si para cada $n \in \N$ definimos $\alpha_m = sup\{ x_n : n \geq m \}$ la sucesión $\alpha_m$ es decreciente y
+    Además, si para cada $n \in \N$ definimos $\alpha_m = \sup \left\{ x_n : n \geq m \right\}$ la sucesión $\alpha_m$ es decreciente y
     $\limsup_{n \to \infty} x_n = inf\{\alpha_m\} = inf_{m \geq 1} ( sup_{n \geq m}\{x_n\} )$.
 
-    Análogamente $\liminf_{n \to \infty} x_n = sup\{\alpha_m\} = sup_{m \geq 1} ( inf_{n \geq m}\{x_n\} )$.
+    Análogamente $\liminf_{n \to \infty} x_n = \sup\left\{\alpha_m\right\} = \sup_{m \geq 1} ( inf_{n \geq m}\{x_n\} )$.
 \end{definition}
 
 \begin{prop}
