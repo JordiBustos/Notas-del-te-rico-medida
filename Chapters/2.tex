@@ -166,6 +166,22 @@ Veamos como extender $\mc{B}$ a $\overline{\R}$.
 \begin{definition}[Borel extendida]
     Para cada $E \in \mc{B}$, sean $E_1 = E \cup \{ + \infty \}$, $E_2 = E \cup \{ - \infty \}$ y $E_3 = E \cup \{ + \infty, - \infty \}$.
     Consideremos $\overline{\mc{B}} = \{ E_1 \text{, } E_2 \text{, } E_3 \text{, } E : E \in \mc{B} \} = \sigma(\{ (a, +\infty] : a \in \R \})$.
-    Probar que $\overline{\mc{B}}$ es $\sigma$-álgebra de $\overline{\R}$ se deja como ejercicio.
-\end{definition}
+    $\overline{\mc{B}}$ es $\sigma$-álgebra de $\overline{\R}$.
 
+    \begin{proof}
+        \begin{enumerate}
+            \item $\O \in \mc{B} \Rightarrow \O \in \overline{\mc{B}}$ y $\R \in \mc{B} \Rightarrow \overline{\R} = \R \cup \{ +\infty \text{, } -\infty \} \Rightarrow \overline{\R} \in \overline{\mc{B}}$.
+            \item \begin{align*}
+                      E   & \in \mc{B} \Rightarrow E^c \in \mc{B} \Rightarrow E^c \in \overline{\mc{B}}                                                          \\
+                      E_1 & = E \cup \{ +\infty \} : E \in \mc{B} \Rightarrow E_1^c = E^c \cap [-\infty \text{, } + \infty) \in \overline{\mc{B}}                \\
+                      E_2 & = E \cup \{ -\infty \} : E \in \mc{B} \Rightarrow E_2^c = E^c \cap (-\infty \text{, } + \infty] \in \overline{\mc{B}}                \\
+                      E_3 & = E \cup \{ +\infty, -\infty \} : E \in \mc{B} \Rightarrow E_3^c = E^c \cap (-\infty \text{, } + \infty) = E^c \in \overline{\mc{B}}
+                  \end{align*}
+            \item Sea $\{ A_n \}_{n \geq 1} \subseteq \overline{\mc{B}} \Rightarrow$ \begin{align*}
+                       & \forall n \in \N \quad A_n \cap \R \in \mc{B} \Rightarrow \left( \bigcup_{n \geq 1} A_n \right) \cap \R \in \mc{B} \\
+                       & \Rightarrow \left( \bigcup_{n \geq 1} A_n \cap \R \right) \in \mc{B}                                               \\
+                       & \Rightarrow \bigcup_{n \geq 1} A_n \in \overline{\mc{B}}
+                  \end{align*}
+        \end{enumerate}
+    \end{proof}
+\end{definition}

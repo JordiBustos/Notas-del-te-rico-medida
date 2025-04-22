@@ -13,7 +13,12 @@ $(P$, $\xi)$; y le podemos asignar su suma de Riemann \begin{align*}S(P\text{, }
     \end{align*}
 \end{definition}
 
-Ejercicio: Probar que si $f$ es integrable Riemann entonces es acotada. \\
+\begin{prop}
+    Si $f$ es integrable Riemann entonces es acotada.
+    \begin{proof}
+        Ejercicio.
+    \end{proof}
+\end{prop}
 
 Si $f$ es acotada, dada una partición $P$ del dominio de $f$, para cada $i \in 1 \text{, } \cdots \text{, } n$ definimos:
 \begin{align*}
@@ -105,12 +110,15 @@ Dado $X$ un conjunto arbitrario no vacío. Sea $\mc{P}(X)$ el conjunto de partes
 
 \begin{note}
     Si $\mf{X}$ es una $\sigma$-álgebra de $X$ y $A_1 \text{, } \cdots \text{, } A_n \in \mf{X}$ entonces $\bigcup_{k=1}^{n} A_k \in \mf{X}$.
-    Idea de la demostración: Sea $(B_m)_{m \geq 1}$ la sucesión en $\mf{X}$ definida por \begin{equation*}
-        B_m = \begin{cases}
-            A_m & 1 \leq m \leq n \\
-            \O  & m > n
-        \end{cases}
-    \end{equation*}
+    \begin{proof}
+        Sea $(B_m)_{m \geq 1}$ la sucesión en $\mf{X}$ definida por \begin{equation*}
+            B_m = \begin{cases}
+                A_m & 1 \leq m \leq n \\
+                \O  & m > n
+            \end{cases}
+        \end{equation*}
+        Luego $\bigcup_{m \geq 1} B_m = \bigcup_{i = 1}^n A_n \in \mf{X}$ por definición de $\sigma$-álgebra.
+    \end{proof}
 \end{note}
 
 \begin{note}
@@ -126,23 +134,42 @@ Dado $X$ un conjunto arbitrario no vacío. Sea $\mc{P}(X)$ el conjunto de partes
         \item $\mf{X} = \{ \O, X \}$ es una $\sigma$-álgebra.
         \item $\mf{X} = \mc{P}(X)$ es una $\sigma$-álgebra.
         \item Sea $A \neq \O \subset X$. Luego $\mf{X} = \{ \O, A, A^c, X \}$ es una $\sigma$-álgebra.
-        \item Supongamos que $X$ no es numerable y sea
-              \begin{equation*}
-                  \mf{X} = \{ A \subseteq X : A \text{ es numerable ó } A^c \text{ es numerable} \}
-              \end{equation*}
-              es una $\sigma$-álgebra. Demostración ejercicio y además $\mf{X} \neq \mc{P}(X)$.
     \end{enumerate}
+\end{eg}
+
+\begin{eg}
+    Supongamos que $X$ no es numerable y sea
+    \begin{equation*}
+        \mf{X} = \{ A \subseteq X : A \text{ es numerable ó } A^c \text{ es numerable} \}
+    \end{equation*}
+    es una $\sigma$-álgebra tal que $\mf{X} \neq \mc{P}(X)$.
+    \begin{proof}
+        \begin{enumerate}
+            \item $\O$ es numerable y $X^c = \O$ es numerable $\Rightarrow \O$, $X \in \mf{X}$.
+            \item Sea $A \in \mf{X}$. Si $A$ es numerable entonces $A^c \in \mf{X}$, pues $(A^c)^c$ es numerable.
+                 Si $A$ es no numerable, tal que $A \in \mf{X} \Rightarrow A^c$ es numerable y $A^c \in \mf{X}$. 
+            \item Sea $(A_n)_{n \geq 1}$ una sucesión en $\mf{X}$. Tenemos que para cada $n \in \N$, $A_n$ es numerable o $A_n^c$ lo es.
+                    Luego si todos los $A_n$ son numerables, $\bigcup_{n \geq 1} A_n$ es numerable y luego $\bigcup_{n \geq 1} A_n \in \mf{X}$. Por otro lado, si existe al menos un $n_0 \in \N$ tal que $A_{n_0}$ es no numerable, entonces 
+                    $\bigcup_{n \geq 1} A_n$ es no numerable, pero $\bigcap_{n \geq 1} A_n^c \subseteq A_{n_0}$ es tal que $A_{n_0}^c$ es numerable y por lo tanto $\bigcup_{n \geq 1} A_n \in \mf{X}$. 
+        \end{enumerate}
+    \end{proof}
 \end{eg}
 
 \begin{lemma}
     Dado un conjunto $X$, sean $\mf{X}_1, \mf{X}_2$ dos $\sigma$-álgebras de $X$. Entonces $\mf{X}_1 \cap \mf{X}_2$ es una $\sigma$-álgebra de $X$.
     Más aún si $(\mf{X}_i)_{i \in I}$ es una familia de $\sigma$-álgebras de $X$ entonces $\bigcap_{i \in I} \mf{X}_i$ es una $\sigma$-álgebra de $X$.
     \begin{proof}
-        Queda como ejercicio.
+        Sean $\mf{X}_1$, $\mf{X}_2$ $\sigma$-álgebras de $X$.
+        \begin{enumerate}
+            \item $\O$, $X \in \mf{X}_1$ y $\mf{X}_2 \Rightarrow \O$, $X \in \mf{X}_1 \cap \mf{X}_2$.
+            \item Sea $A \in \mf{X}_1 \cap \mf{X}_2$ entonces $A^c \in \mf{X}_1$ y $A^c \in \mf{X}_2$.
+                  Luego $A^c \in \mf{X}_1 \cap \mf{X}_2$.
+            \item Sea $(A_n)_{n \geq 1}$ una sucesión en $\mf{X}_1 \cap \mf{X}_2$. Entonces $\bigcup_{n=1}^{\infty} A_n \in \mf{X}_1$ y $\bigcup_{n=1}^{\infty} A_n \in \mf{X}_2$.
+                  Luego $\bigcup_{n=1}^{\infty} A_n \in \mf{X}_1 \cap \mf{X}_2$.
+        \end{enumerate}
+        Para demostrar lo último, aplicamos inducción sobre $n \in \N$, donde el caso base es $n = 2$, que acabamos de probar.
     \end{proof}
 \end{lemma}
-
-\clearpage
 
 \begin{prop}[$\sigma$-álgebra generada por $A$]
     Dado un conjunto $X$, sea $A \neq \O \subseteq \mc{P}(X) \Rightarrow \exists$ $\sigma$-álgebra $\sigma(A)$ que verifica: \begin{enumerate}
