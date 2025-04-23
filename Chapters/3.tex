@@ -82,14 +82,14 @@ Notación: Dada una función $f: X \to \R$ para cada $\alpha \in \R$ definimos: 
 \end{eg}
 
 \begin{eg}
-    $X = \R, \mf{X} = \mc{B}_n$ y $f: \R \to \R$ es monótona (creciente) entonces es $\mc{B}$-medible.
+    $X = \R$, $\mf{X} = \mc{B}_n$ y $f: \R \to \R$ es monótona (creciente) entonces es $\mc{B}$-medible.
 \end{eg}
 
 \begin{prop}
     $f: X \to \R$ es $\mf{X}$-medible $\iff f^{-1}(B) \in \mf{X} \quad (\forall B \in \mc{B})$.
     \begin{proof}
         Supongamos que $f : X \to \R$ es $\mf{X}$-medible. Luego definimos $E = \{ F \subseteq \R : f^{-1}(F) \in \mf{X} \}$ que es $\sigma$-álgebra.
-        Si $A = \{ (\alpha\text{, } +\infty) \}$, $\sigma(A) = \mc{B}$ y por ser $f$ $\mf{X}$-medible, $f^{-1}((\alpha\text{, } +\infty)) \in \mf{X}$.
+        Si $A = \{ (\alpha\text{, } +\infty) : \alpha \in \R \}$, $\sigma(A) = \mc{B}$ y por ser $f$ $\mf{X}$-medible, $f^{-1}((\alpha\text{, } +\infty)) \in \mf{X}$.
         Luego, $(\alpha \text{, } +\infty) \in E$ y $\sigma(A) = \mc{B} \subseteq E$ por ser la menor $\sigma$-álgebra, entonces se tiene que $\forall B \in \mc{B} \quad f^{-1}(B) \in \mf{X}$.
 
         Supongamos ahora que $f^{-1}(B) \in \mf{X} \quad \forall B \in \mc{B}$.
@@ -200,7 +200,7 @@ A la clase de las funciones (a valores en la recta extendida) $\mf{X}$-medibles 
     \end{equation*}
     $f+g \in M(X\text{, } \mf{X})$
     \begin{proof}
-       Ejercicio. 
+        Ejercicio.
     \end{proof}
 \end{note}
 
